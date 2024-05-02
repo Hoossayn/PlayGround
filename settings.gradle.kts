@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -10,9 +11,13 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven(uri("https://androidx.dev/storage/compose-compiler/repository/"))
+        maven(uri("https://jitpack.io"))
     }
 }
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
+
 
 rootProject.name = "PlayGround"
 include(":app")
- 
+
