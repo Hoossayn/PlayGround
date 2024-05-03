@@ -39,10 +39,54 @@ gradlePlugin {
             implementationClass = "AndroidApplicationConventionPlugin"
         }
 
-
         register("androidHilt") {
             id = "com.example.playground.android.hilt"
             implementationClass = "AndroidHiltConventionPlugin"
+        }
+
+        register("androidLibrary") {
+            id = "com.example.playground.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+
+        register("androidFeature") {
+            id = "com.example.playground.android.feature"
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
+
+        register("androidTest") {
+            id = "com.example.playground.android.test"
+            implementationClass = "AndroidTestConventionPlugin"
+        }
+
+        register("kotlinJVM") {
+            id = "com.example.playground.kotlin.jvm"
+            implementationClass = "JvmLibraryConventionPlugin"
+        }
+
+        register("detekt") {
+            id = "com.example.playground.build.detekt"
+            implementationClass = "DetektConventionPlugin"
+        }
+
+        register("ktlint") {
+            id = "com.example.playground.build.ktlint"
+            implementationClass = "KtLintConventionPlugin"
+        }
+
+        register("androidNavigation") {
+            id = "com.example.playground.android.navigation"
+            implementationClass = "AndroidNavigationConventionPlugin"
+        }
+
+        register("androidAppCompose") {
+            id = "com.example.playground.android.application.compose"
+            implementationClass = "AndroidApplicationComposeConventionPlugin"
+        }
+
+        register("androidLibraryCompose") {
+            id = "com.example.playground.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
 
     }

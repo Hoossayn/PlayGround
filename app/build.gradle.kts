@@ -1,7 +1,8 @@
 plugins {
     id("com.example.playground.android.application")
-    id("org.jetbrains.kotlin.android")
     id("com.example.playground.android.hilt")
+    id("com.example.playground.android.application.compose")
+    id("com.example.playground.android.navigation")
 }
 
 android {
@@ -61,6 +62,8 @@ android {
 
 dependencies {
 
+    implementation(projects.core.designSystem)
+
     // lifecycle
     //implementation(libs)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -94,6 +97,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.navigation.compose)
+
 
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)

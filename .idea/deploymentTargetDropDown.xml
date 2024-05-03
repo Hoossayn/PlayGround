@@ -5,6 +5,12 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="core.common">
+        <State />
+      </entry>
+      <entry key="core.design-system">
+        <State />
+      </entry>
     </value>
   </component>
 </project>
