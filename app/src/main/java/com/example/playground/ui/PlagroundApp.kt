@@ -61,7 +61,7 @@ fun PlayGroundApp(
             }
         )
     }
-    LaunchedEffect(navBackStackEntry?.destination?.route) {
+    /*LaunchedEffect(navBackStackEntry?.destination?.route) {
         when (navBackStackEntry?.destination?.route) {
             movieDetailsRoutePattern, peopleDetailsRoutePattern, loginRoutePattern,
             mediaRoutePattern,
@@ -69,7 +69,7 @@ fun PlayGroundApp(
 
             else -> bottomBarState.value = true
         }
-    }
+    }*/
 }
 
 

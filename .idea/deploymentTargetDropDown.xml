@@ -3,12 +3,37 @@
   <component name="deploymentTargetDropDown">
     <value>
       <entry key="app">
-        <State />
+        <State>
+          <targetSelectedWithDropDown>
+            <Target>
+              <type value="QUICK_BOOT_TARGET" />
+              <deviceKey>
+                <Key>
+                  <type value="VIRTUAL_DEVICE_PATH" />
+                  <value value="$USER_HOME$/.android/avd/Pixel_4a_API_32.avd" />
+                </Key>
+              </deviceKey>
+            </Target>
+          </targetSelectedWithDropDown>
+          <timeTargetWasSelectedWithDropDown value="2024-05-06T12:07:30.326566Z" />
+        </State>
       </entry>
       <entry key="core.common">
         <State />
       </entry>
       <entry key="core.design-system">
+        <State />
+      </entry>
+      <entry key="core.model">
+        <State />
+      </entry>
+      <entry key="core.ui">
+        <State />
+      </entry>
+      <entry key="model">
+        <State />
+      </entry>
+      <entry key="screens.movies">
         <State />
       </entry>
     </value>

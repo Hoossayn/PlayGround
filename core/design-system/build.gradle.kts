@@ -6,7 +6,6 @@ plugins {
 
 android {
     namespace = "com.example.design_system"
-    //compileSdk = 34
 
     defaultConfig {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -21,13 +20,6 @@ android {
             )
         }
         debug { }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
     }
 }
 

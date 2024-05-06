@@ -1,11 +1,19 @@
 package com.example.design_system.core.theme
 
+import android.os.Build
+import androidx.annotation.ChecksSdkIntAtLeast
 import androidx.annotation.VisibleForTesting
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.ColorScheme
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
+import androidx.compose.material3.dynamicDarkColorScheme
+import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.platform.LocalContext
+import com.example.core.common.annotation.ExcludeFromGeneratedCoverageReport
 
 @VisibleForTesting
 val LightColors =
@@ -98,3 +106,47 @@ object PlayGround {
 
     object Icons
 }
+
+@Composable
+@ExcludeFromGeneratedCoverageReport
+fun PlayGroundTheme(
+    isDarkTheme: Boolean = isSystemInDarkTheme(),
+    isDynamicColor: Boolean = false,
+    content: @Composable () -> Unit,
+) {
+    /**
+     * Dynamic Colors are supported on API level 31 and above
+     * */
+    val dynamicColor = isDynamicColor && supportsDynamicTheming()
+    val colorScheme =
+        when {
+            dynamicColor && isDarkTheme -> {
+                Pair(dynamicDarkColorScheme(LocalContext.current), playGroundDarkColorScheme())
+            }
+
+            dynamicColor && !isDarkTheme -> {
+                Pair(dynamicLightColorScheme(LocalContext.current), playGroundLightColorScheme())
+            }
+
+            isDarkTheme -> Pair(DarkColors, playGroundDarkColorScheme())
+            else -> Pair(LightColors, playGroundLightColorScheme())
+        }
+    val plaGroundShape = PlaygroundShape()
+
+    CompositionLocalProvider(
+        LocalPlayGroundSpacing provides PlayGroundSpacing(),
+        LocalPlayGroundTypography provides PlayGroundTypography(),
+        LocalPlayGroundColorScheme provides colorScheme.second,
+        LocalPlayGroundShape provides plaGroundShape,
+    ) {
+        MaterialTheme(
+            colorScheme = colorScheme.first,
+            typography = PlayGround.typography.toMaterialTypography(),
+            shapes = plaGroundShape.toMaterialShapes(),
+            content = content,
+        )
+    }
+}
+
+@ChecksSdkIntAtLeast(api = Build.VERSION_CODES.S)
+fun supportsDynamicTheming() = Build.VERSION.SDK_INT >= Build.VERSION_CODES.S

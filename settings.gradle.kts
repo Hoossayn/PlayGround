@@ -22,3 +22,8 @@ rootProject.name = "PlayGround"
 include(":app")
 include(":core:design-system")
 include(":core:common")
+include(":core:ui")
+include(":core:model")
+
+include(":screens:movies")
+

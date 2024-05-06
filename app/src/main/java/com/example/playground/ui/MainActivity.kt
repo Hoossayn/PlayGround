@@ -5,27 +5,24 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.viewModels
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.core.view.WindowCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.metrics.performance.JankStats
-import com.example.playground.ui.theme.PlayGroundTheme
+import com.example.core.common.injection.IoDispatcher
+import com.example.core.model.ThemeConfig
+import com.example.design_system.core.theme.PlayGroundTheme
 import com.example.playground.viewmodel.AppUIState
 import com.example.playground.viewmodel.AppViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -37,8 +34,8 @@ class MainActivity : ComponentActivity() {
         const val TAG = "MainActivity"
     }
 
-    @Inject
-    lateinit var lazyStats: dagger.Lazy<JankStats>
+   // @Inject
+    //lateinit var lazyStats: dagger.Lazy<JankStats>
 
     @IoDispatcher
     @Inject

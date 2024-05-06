@@ -33,6 +33,7 @@ import androidx.navigation.navOptions
 import com.example.design_system.core.theme.PlayGround
 import com.example.playground.R
 import com.example.playground.ui.theme.PlayGroundTheme
+import com.example.screens.movies.navigation.moviesRoutePattern
 
 const val BOTTOM_NAV_BAR_TEST_TAG = "BottomNavigationBar"
 
@@ -100,7 +101,7 @@ fun BottomNavigation(
 
 sealed interface BottomNavItem {
     val icon: Int
-    //val route: String
+    val route: String
 
     @Composable
     fun title(): String
@@ -108,41 +109,45 @@ sealed interface BottomNavItem {
     data object Movies : BottomNavItem {
         override val icon: Int
             get() = R.drawable.baseline_video_library_24
-        /*override val route: String
-            get() = moviesRoutePattern*/
+        override val route: String
+            get() = moviesRoutePattern
 
         @Composable
-        override fun title(): String = "Movies"
+        override fun title(): String =
+            stringResource(id = com.example.screens.movies.R.string.movies)
     }
 
     data object TVShows : BottomNavItem {
         override val icon: Int
             get() = R.drawable.baseline_live_tv_24
-        /*override val route: String
-            get() = tvShowsNavPattern*/
+        override val route: String
+            get() = moviesRoutePattern
 
         @Composable
-        override fun title(): String = "TV shows"
+        override fun title(): String =
+            stringResource(com.example.screens.movies.R.string.movies)
     }
 
     data object People : BottomNavItem {
         override val icon: Int
             get() = R.drawable.baseline_people_24
-       /* override val route: String
-            get() = peopleNavPattern*/
+        override val route: String
+            get() = moviesRoutePattern
 
         @Composable
-        override fun title(): String = "People"
+        override fun title(): String =
+            stringResource(com.example.screens.movies.R.string.movies)
     }
 
     data object More : BottomNavItem {
         override val icon: Int
             get() = R.drawable.baseline_more_24
-        /*override val route: String
-            get() = settingsNavPattern*/
+        override val route: String
+            get() = moviesRoutePattern
 
         @Composable
-        override fun title(): String = "More"
+        override fun title(): String =
+            stringResource(com.example.screens.movies.R.string.movies)
     }
 }
 
