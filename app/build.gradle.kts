@@ -38,7 +38,7 @@ android {
         }
     }
 
-   
+
 
     packaging {
         resources {
@@ -60,11 +60,13 @@ dependencies {
     implementation(projects.core.designSystem)
     implementation(projects.core.common)
     implementation(projects.core.model)
+    implementation(projects.core.data)
+
+
     implementation(projects.screens.movies)
 
 
     // lifecycle
-    //implementation(libs)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
     implementation(libs.androidx.lifecycle.viewmodel.compose)

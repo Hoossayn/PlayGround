@@ -24,6 +24,8 @@ include(":core:design-system")
 include(":core:common")
 include(":core:ui")
 include(":core:model")
+include(":core:data")
 
 include(":screens:movies")
+
 

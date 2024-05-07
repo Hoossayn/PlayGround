@@ -14,7 +14,6 @@ import androidx.core.view.WindowCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.metrics.performance.JankStats
 import com.example.core.common.injection.IoDispatcher
 import com.example.core.model.ThemeConfig
 import com.example.design_system.core.theme.PlayGroundTheme

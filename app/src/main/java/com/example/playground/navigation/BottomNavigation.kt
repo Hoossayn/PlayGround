@@ -31,8 +31,8 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
 import com.example.design_system.core.theme.PlayGround
+import com.example.design_system.core.theme.PlayGroundTheme
 import com.example.playground.R
-import com.example.playground.ui.theme.PlayGroundTheme
 import com.example.screens.movies.navigation.moviesRoutePattern
 
 const val BOTTOM_NAV_BAR_TEST_TAG = "BottomNavigationBar"
