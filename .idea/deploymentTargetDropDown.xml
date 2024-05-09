@@ -2,6 +2,9 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
+      <entry key="BottomNavigationPreview">
+        <State />
+      </entry>
       <entry key="app">
         <State>
           <targetSelectedWithDropDown>
@@ -21,10 +24,16 @@
       <entry key="core.common">
         <State />
       </entry>
+      <entry key="core.data">
+        <State />
+      </entry>
       <entry key="core.design-system">
         <State />
       </entry>
       <entry key="core.model">
+        <State />
+      </entry>
+      <entry key="core.network">
         <State />
       </entry>
       <entry key="core.ui">

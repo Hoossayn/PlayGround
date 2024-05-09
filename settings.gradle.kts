@@ -25,6 +25,7 @@ include(":core:common")
 include(":core:ui")
 include(":core:model")
 include(":core:data")
+include(":core:network")
 
 include(":screens:movies")
 
