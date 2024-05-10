@@ -6,6 +6,7 @@ import com.example.core.ui.navigation.enterTransition
 import com.example.core.ui.navigation.exitTransition
 import com.example.core.ui.navigation.popEnterTransition
 import com.example.core.ui.navigation.popExitTransition
+import com.example.screens.movies.screen.MoviesScreen
 
 const val  moviesRoutePattern = "/movies"
 
@@ -17,6 +18,6 @@ fun NavGraphBuilder.moviesScreen(onMovieClick: (Long) -> Unit) {
         popEnterTransition = popEnterTransition,
         popExitTransition = popExitTransition,
     ) {
-        //MoviesScreen(onMovieClick = onMovieClick)
+        MoviesScreen(onMovieClick = onMovieClick)
     }
 }

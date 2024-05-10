@@ -5,6 +5,8 @@ plugins {
     id("com.example.playground.android.hilt")
     id("com.example.playground.android.application.compose")
     id("com.example.playground.android.navigation")
+    id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
+
 }
 
 android {
@@ -22,6 +24,10 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 
     buildTypes {
@@ -109,4 +115,9 @@ dependencies {
 
     //testImplementation(projects.core.test)
     //androidTestImplementation(projects.core.test)
+}
+
+secrets {
+    propertiesFileName = "secrets.properties"
+    defaultPropertiesFileName = "local.defaults.properties"
 }

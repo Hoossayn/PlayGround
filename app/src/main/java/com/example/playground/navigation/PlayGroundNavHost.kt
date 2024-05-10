@@ -1,7 +1,12 @@
 package com.example.playground.navigation
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.navOptions
+import com.example.screens.movies.navigation.moviesRoutePattern
+import com.example.screens.movies.navigation.moviesScreen
 
 @Composable
 fun PlayGroundNavHost(
@@ -10,6 +15,23 @@ fun PlayGroundNavHost(
 ) {
     val onNavigateUp: () -> Unit = {
         navController.navigateUp()
+    }
+
+    val onMovieClick: (Long) -> Unit = { movieId ->
+        /*navController.navigateToMovieDetails(
+            movieId = movieId,
+            navOptions = navOptions {},
+        )*/
+    }
+
+
+    NavHost(
+        modifier = Modifier,
+        navController = navController,
+        startDestination = moviesRoutePattern
+    ) {
+        moviesScreen(onMovieClick = onMovieClick)
+
     }
 
 }

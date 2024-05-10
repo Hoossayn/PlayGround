@@ -8,6 +8,8 @@ import com.example.core.common.injection.qualifier.AuthOkHttpClient
 import com.example.core.common.injection.qualifier.NoAuthOkHttpClient
 import com.example.core.network.AuthorizationInterceptor
 import com.example.core.network.BuildConfig
+import com.example.core.network.datasource.DefaultMoviesRemoteDataSource
+import com.example.core.network.datasource.MoviesRemoteDataSource
 import com.example.core.network.service.MovieListApi
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
@@ -51,7 +53,7 @@ object NetworkModule {
 
     @[Provides Singleton AuthOkHttpClient]
     fun provideAuthOkHttpClient(chuckerInterceptor: ChuckerInterceptor): OkHttpClient {
-        val authToken = "BuildConfig.TMDB_API_KEY"
+        val authToken = BuildConfig.TMDB_API_KEY
         val builder =
             OkHttpClient.Builder().addInterceptor(chuckerInterceptor)
                 .addInterceptor(AuthorizationInterceptor(authToken))
@@ -92,10 +94,13 @@ object NetworkModule {
         .client(okHttpClient).addConverterFactory(GsonConverterFactory.create(gson))
         .build()
 
-
     @[Provides Singleton]
     fun provideMoviesApi(retrofit: Retrofit): MovieListApi =
         retrofit.create(MovieListApi::class.java)
 
+
+    @[Provides Singleton]
+    fun provideMoviesRemoteDataSource(moviesApi: MovieListApi): MoviesRemoteDataSource =
+        DefaultMoviesRemoteDataSource(moviesApi = moviesApi)
 
 }
