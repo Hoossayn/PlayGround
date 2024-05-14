@@ -1,0 +1,12 @@
+<resources>
+    <string name="tv_shows_title">TV Shows</string>
+    <string name="tv_shows_content_description_search">search tv shows</string>
+    <string name="include_adult">Adult</string>
+    <string name="include_video">Video</string>
+    <string name="tv_shows">TV Shows</string>
+    <string name="airing_today">Airing Today</string>
+    <string name="on_the_air">On The Air</string>
+    <string name="popular">Popular</string>
+    <string name="top_rated">Top Rated</string>
+    <string name="discover">Discover</string>
+</resources>

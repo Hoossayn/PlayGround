@@ -33,7 +33,7 @@ class AndroidApplicationConventionPlugin : Plugin<Project> {
 
                 lint {
                     baseline = file("lint-baseline.xml")
-//                    quiet = true
+                    //quiet = true
                     abortOnError = false // fix your lint issue
                     ignoreWarnings = true
                     checkDependencies = true

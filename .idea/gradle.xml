@@ -33,6 +33,7 @@
             <option value="$PROJECT_DIR$/core/ui" />
             <option value="$PROJECT_DIR$/screens" />
             <option value="$PROJECT_DIR$/screens/movies" />
+            <option value="$PROJECT_DIR$/screens/tvShows" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />

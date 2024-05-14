@@ -1,5 +1,3 @@
-
-
 package com.example.convention
 
 import com.android.build.api.dsl.CommonExtension

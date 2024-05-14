@@ -28,5 +28,4 @@ include(":core:data")
 include(":core:network")
 
 include(":screens:movies")
-
-
+include(":screens:tvShows")

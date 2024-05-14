@@ -7,6 +7,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.navOptions
 import com.example.screens.movies.navigation.moviesRoutePattern
 import com.example.screens.movies.navigation.moviesScreen
+import com.example.screens.tvshows.navigation.tvShowsScreen
 
 @Composable
 fun PlayGroundNavHost(
@@ -31,6 +32,7 @@ fun PlayGroundNavHost(
         startDestination = moviesRoutePattern
     ) {
         moviesScreen(onMovieClick = onMovieClick)
+        tvShowsScreen(onTVShowClick = {})
 
     }
 

@@ -1,7 +1,9 @@
 package com.example.core.data.injection
 
 import com.example.core.data.repository.DefaultMovieListRepository
+import com.example.core.data.repository.DefaultTvShowsRepository
 import com.example.core.data.repository.MovieListRepository
+import com.example.core.data.repository.TvShowsRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -13,5 +15,8 @@ interface DataModule {
 
     @Binds
     fun provideMoviesRepository(repository: DefaultMovieListRepository): MovieListRepository
+
+    @Binds
+    fun provideTVShowsRepository(repo: DefaultTvShowsRepository): TvShowsRepository
 
 }

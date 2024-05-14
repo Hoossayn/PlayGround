@@ -36,6 +36,7 @@ import com.example.design_system.core.theme.PlayGround
 import com.example.design_system.core.theme.PlayGroundTheme
 import com.example.playground.R
 import com.example.screens.movies.navigation.moviesRoutePattern
+import com.example.screens.tvshows.navigation.tvShowsNavPattern
 
 const val BOTTOM_NAV_BAR_TEST_TAG = "BottomNavigationBar"
 
@@ -125,11 +126,11 @@ sealed interface BottomNavItem {
         override val icon: Int
             get() = R.drawable.baseline_live_tv_24
         override val route: String
-            get() = moviesRoutePattern
+            get() = tvShowsNavPattern
 
         @Composable
         override fun title(): String =
-            stringResource(com.example.screens.movies.R.string.movies)
+            stringResource(com.example.screens.tvshows.R.string.tv_shows_title)
     }
 
     data object People : BottomNavItem {

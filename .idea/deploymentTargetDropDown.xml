@@ -45,6 +45,15 @@
       <entry key="screens.movies">
         <State />
       </entry>
+      <entry key="screens.myapplication">
+        <State />
+      </entry>
+      <entry key="screens.tvShows">
+        <State />
+      </entry>
+      <entry key="screens.tvshows">
+        <State />
+      </entry>
     </value>
   </component>
 </project>

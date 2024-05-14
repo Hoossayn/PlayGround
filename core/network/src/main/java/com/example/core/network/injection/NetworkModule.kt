@@ -11,6 +11,7 @@ import com.example.core.network.BuildConfig
 import com.example.core.network.datasource.DefaultMoviesRemoteDataSource
 import com.example.core.network.datasource.MoviesRemoteDataSource
 import com.example.core.network.service.MovieListApi
+import com.example.core.network.service.TVShowsListApi
 import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -102,5 +103,9 @@ object NetworkModule {
     @[Provides Singleton]
     fun provideMoviesRemoteDataSource(moviesApi: MovieListApi): MoviesRemoteDataSource =
         DefaultMoviesRemoteDataSource(moviesApi = moviesApi)
+
+    @[Provides Singleton]
+    fun provideTvSeriesListsApi(retrofit: Retrofit): TVShowsListApi =
+        retrofit.create(TVShowsListApi::class.java)
 
 }
