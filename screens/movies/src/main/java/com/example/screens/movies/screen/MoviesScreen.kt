@@ -93,7 +93,7 @@ fun MoviesScreen(
     val availableFilters by viewModel.availableFilters.collectAsStateWithLifecycle()
     val movieLazyPagingItems = viewModel.movies.collectAsLazyPagingItems()
     val onItemSelected: (MovieListFilterItem.FilterType) -> Unit = {
-        viewModel.OnEvent(MoviesViewModel.Event.OnFilterSelected(it))
+        viewModel.onEvent(MoviesViewModel.Event.OnFilterSelected(it))
     }
 
     MoviesScreen(
