@@ -36,6 +36,9 @@
       <entry key="core.network">
         <State />
       </entry>
+      <entry key="core.test">
+        <State />
+      </entry>
       <entry key="core.ui">
         <State />
       </entry>
@@ -52,6 +55,9 @@
         <State />
       </entry>
       <entry key="screens.tvshows">
+        <State />
+      </entry>
+      <entry key="ui-test-hilt-manifest">
         <State />
       </entry>
     </value>

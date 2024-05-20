@@ -27,6 +27,7 @@ include(":core:model")
 include(":core:data")
 include(":core:network")
 include(":core:test")
+include(":ui-test-hilt-manifest")
 
 include(":screens:movies")
 include(":screens:tvShows")

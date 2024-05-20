@@ -30,10 +30,12 @@
             <option value="$PROJECT_DIR$/core/design-system" />
             <option value="$PROJECT_DIR$/core/model" />
             <option value="$PROJECT_DIR$/core/network" />
+            <option value="$PROJECT_DIR$/core/test" />
             <option value="$PROJECT_DIR$/core/ui" />
             <option value="$PROJECT_DIR$/screens" />
             <option value="$PROJECT_DIR$/screens/movies" />
             <option value="$PROJECT_DIR$/screens/tvShows" />
+            <option value="$PROJECT_DIR$/ui-test-hilt-manifest" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="false" />
