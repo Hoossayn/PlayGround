@@ -26,6 +26,8 @@ include(":core:ui")
 include(":core:model")
 include(":core:data")
 include(":core:network")
+include(":core:test")
 
 include(":screens:movies")
 include(":screens:tvShows")
+
