@@ -11,15 +11,11 @@ import androidx.compose.ui.test.hasClickAction
 import androidx.compose.ui.test.hasProgressBarRangeInfo
 import androidx.compose.ui.test.hasScrollAction
 import androidx.compose.ui.test.hasText
-import androidx.compose.ui.test.isToggleable
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onAllNodesWithTag
 import androidx.compose.ui.test.onChildren
 import androidx.compose.ui.test.onFirst
-import androidx.compose.ui.test.onLast
-import androidx.compose.ui.test.onNodeWithContentDescription
 import androidx.compose.ui.test.onNodeWithTag
-import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTouchInput
 import androidx.compose.ui.test.swipeLeft
@@ -39,11 +35,8 @@ import com.example.screens.movies.screen.CHIP_GROUP_TEST_TAG
 import com.example.screens.movies.screen.FRESH_LOAD_PROGRESS_TEST_TAG
 import com.example.screens.movies.screen.MOVIES_GRID_ITEMS_TEST_TAG
 import com.example.screens.movies.screen.MoviesScreen
-import com.example.screens.movies.screen.SEARCH_TEST_TAG
-import com.google.common.truth.Truth
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.flowOf
-import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -146,7 +139,7 @@ class MovieScreenTest {
             .assertIsDisplayed()
             .performClick()
 
-        Truth.assertThat(onFilterItemSelectedCounter).isEqualTo(1)
+        assertThat(onFilterItemSelectedCounter).isEqualTo(1)
     }
 
     @Test
