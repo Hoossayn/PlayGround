@@ -2,9 +2,6 @@
 <project version="4">
   <component name="deploymentTargetDropDown">
     <value>
-      <entry key="BottomNavigationPreview">
-        <State />
-      </entry>
       <entry key="app">
         <State>
           <targetSelectedWithDropDown>
@@ -49,6 +46,9 @@
         <State />
       </entry>
       <entry key="screens.myapplication">
+        <State />
+      </entry>
+      <entry key="screens.people">
         <State />
       </entry>
       <entry key="screens.tvShows">
