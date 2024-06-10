@@ -31,5 +31,5 @@ include(":ui-test-hilt-manifest")
 
 include(":screens:movies")
 include(":screens:tvShows")
-
 include(":screens:people")
+include(":screens:movieDetails")

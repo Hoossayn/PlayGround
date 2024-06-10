@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="11">
+      <module name="PlayGround.screens.moviedetails" target="17" />
       <module name="PlayGround.screens.myapplication" target="17" />
       <module name="PlayGround.screens.tvshows" target="17" />
     </bytecodeTargetLevel>

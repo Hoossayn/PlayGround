@@ -5,6 +5,8 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.navOptions
+import com.example.screens.moviedetails.navigation.movieDetailsScreen
+import com.example.screens.moviedetails.navigation.navigateToMovieDetails
 import com.example.screens.movies.navigation.moviesRoutePattern
 import com.example.screens.movies.navigation.moviesScreen
 import com.example.screens.people.navigation.peopleScreen
@@ -20,10 +22,10 @@ fun PlayGroundNavHost(
     }
 
     val onMovieClick: (Long) -> Unit = { movieId ->
-        /*navController.navigateToMovieDetails(
+        navController.navigateToMovieDetails(
             movieId = movieId,
             navOptions = navOptions {},
-        )*/
+        )
     }
 
 
@@ -35,7 +37,11 @@ fun PlayGroundNavHost(
         moviesScreen(onMovieClick = onMovieClick)
         tvShowsScreen(onTVShowClick = {})
         peopleScreen(onPersonClick = {})
-
+        movieDetailsScreen(
+            onMovieItemClick = onMovieClick,
+            onNavigateUp = onNavigateUp,
+            onWatchTrailerClick = {}
+        )
     }
 
 }

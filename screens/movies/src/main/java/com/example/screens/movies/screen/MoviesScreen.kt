@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.staggeredgrid.LazyVerticalStaggeredGrid
 import androidx.compose.foundation.lazy.staggeredgrid.StaggeredGridCells
@@ -141,7 +142,15 @@ fun MoviesScreen(
                 Crossfade(targetState = showSearch, label = "toggleSearch") { show ->
                     when {
                         show -> {
-
+                            SearchBarRow(
+                                modifier = Modifier.statusBarsPadding(),
+                                isSearchActive = isSearchActive,
+                                query = query,
+                                onQueryChange = { query = it },
+                                onSearch = { isSearchActive = false },
+                                onActiveChange = { showSearch = it },
+                                onCancel = { showSearch = false },
+                            )
                         }
 
                         else -> {

@@ -8,8 +8,11 @@ import com.example.core.common.injection.qualifier.AuthOkHttpClient
 import com.example.core.common.injection.qualifier.NoAuthOkHttpClient
 import com.example.core.network.AuthorizationInterceptor
 import com.example.core.network.BuildConfig
+import com.example.core.network.datasource.DefaultMovieDetailsRemoteDataSource
 import com.example.core.network.datasource.DefaultMoviesRemoteDataSource
+import com.example.core.network.datasource.MovieDetailsRemoteDataSource
 import com.example.core.network.datasource.MoviesRemoteDataSource
+import com.example.core.network.service.MovieDetailsApi
 import com.example.core.network.service.MovieListApi
 import com.example.core.network.service.PeopleListApi
 import com.example.core.network.service.TVShowsListApi
@@ -72,13 +75,11 @@ object NetworkModule {
     @[Provides Singleton NoAuthOkHttpClient]
     fun provideNoAuthOkHttpClient(chuckerInterceptor: ChuckerInterceptor): OkHttpClient {
         val builder = OkHttpClient.Builder().addInterceptor(chuckerInterceptor)
-
         if (BuildConfig.DEBUG) {
             val loggingInterceptor = HttpLoggingInterceptor()
             loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
             builder.addInterceptor(loggingInterceptor)
         }
-
         return builder.build()
     }
 
@@ -100,10 +101,19 @@ object NetworkModule {
     fun provideMoviesApi(retrofit: Retrofit): MovieListApi =
         retrofit.create(MovieListApi::class.java)
 
+    @[Provides Singleton]
+    fun provideMovieDetailsApi(retrofit: Retrofit): MovieDetailsApi =
+        retrofit.create(MovieDetailsApi::class.java)
 
     @[Provides Singleton]
     fun provideMoviesRemoteDataSource(moviesApi: MovieListApi): MoviesRemoteDataSource =
         DefaultMoviesRemoteDataSource(moviesApi = moviesApi)
+
+    @[Provides Singleton]
+    fun provideMovieDetailsRemoteDataSource(
+        movieDetailsApi: MovieDetailsApi,
+    ): MovieDetailsRemoteDataSource =
+        DefaultMovieDetailsRemoteDataSource(movieDetailsApi = movieDetailsApi)
 
     @[Provides Singleton]
     fun provideTvSeriesListsApi(retrofit: Retrofit): TVShowsListApi =

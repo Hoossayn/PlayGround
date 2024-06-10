@@ -42,6 +42,12 @@
       <entry key="model">
         <State />
       </entry>
+      <entry key="screens.movieDetails">
+        <State />
+      </entry>
+      <entry key="screens.moviedetails">
+        <State />
+      </entry>
       <entry key="screens.movies">
         <State />
       </entry>
