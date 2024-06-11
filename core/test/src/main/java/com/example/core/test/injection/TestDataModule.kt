@@ -1,8 +1,10 @@
 package com.example.core.test.injection
 
 import com.example.core.data.injection.DataModule
+import com.example.core.data.repository.MovieDetailsRepository
 import com.example.core.data.repository.MovieListRepository
 import com.example.core.data.repository.TvShowsRepository
+import com.example.core.test.test.data.FakeMovieDetailsRepository
 import com.example.core.test.test.data.FakeMoviesRepository
 import com.example.core.test.test.data.FakeTVShowsRepository
 import dagger.Binds
@@ -22,5 +24,10 @@ abstract class TestDataModule {
 
     @[Binds Singleton]
     abstract fun provideTVShowsRepository(repo: FakeTVShowsRepository): TvShowsRepository
+
+    @[Binds Singleton]
+    abstract fun provideMovieDetailsRepository(
+        movieDetailsRepository: FakeMovieDetailsRepository,
+    ): MovieDetailsRepository
 
 }
