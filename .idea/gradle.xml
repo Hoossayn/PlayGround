@@ -36,6 +36,7 @@
             <option value="$PROJECT_DIR$/screens/movieDetails" />
             <option value="$PROJECT_DIR$/screens/movies" />
             <option value="$PROJECT_DIR$/screens/people" />
+            <option value="$PROJECT_DIR$/screens/settings" />
             <option value="$PROJECT_DIR$/screens/tvShows" />
             <option value="$PROJECT_DIR$/ui-test-hilt-manifest" />
           </set>

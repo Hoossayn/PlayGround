@@ -57,6 +57,9 @@
       <entry key="screens.people">
         <State />
       </entry>
+      <entry key="screens.settings">
+        <State />
+      </entry>
       <entry key="screens.tvShows">
         <State />
       </entry>
