@@ -10,6 +10,7 @@ import com.example.screens.moviedetails.navigation.navigateToMovieDetails
 import com.example.screens.movies.navigation.moviesRoutePattern
 import com.example.screens.movies.navigation.moviesScreen
 import com.example.screens.people.navigation.peopleScreen
+import com.example.screens.settings.navigation.settingsScreen
 import com.example.screens.tvshows.navigation.tvShowsScreen
 
 @Composable
@@ -42,6 +43,7 @@ fun PlayGroundNavHost(
             onNavigateUp = onNavigateUp,
             onWatchTrailerClick = {}
         )
+        settingsScreen(onLoginClick = {})
     }
 
 }

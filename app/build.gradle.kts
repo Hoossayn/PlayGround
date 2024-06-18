@@ -73,6 +73,7 @@ dependencies {
     implementation(projects.screens.tvShows)
     implementation(projects.screens.people)
     implementation(projects.screens.movieDetails)
+    implementation(projects.screens.settings)
 
 
     // lifecycle
