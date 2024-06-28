@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.2.2" type="baseline" client="gradle" dependencies="true" name="AGP (8.2.2)" variant="all" version="8.2.2">
+
+    <issue
+        id="MissingClass"
+        message="Class referenced in the manifest, `com.example.screens.moviedetails.ui.MovieDetails`, was not found in the project or the libraries"
+        errorLine1="            android:name=&quot;.ui.MovieDetails&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/AndroidManifest.xml"
+            line="12"
+            column="27"/>
+    </issue>
+
+</issues>
