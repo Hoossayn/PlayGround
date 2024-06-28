@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.unit.dp
-import com.example.design_system.core.theme.PlayGround
+import com.example.designSystem.core.theme.PlayGround
 
 @Composable
 fun PlayGroundCircularProgressIndicator(modifier: Modifier = Modifier) {

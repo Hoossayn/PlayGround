@@ -12,10 +12,10 @@ import com.example.screens.moviedetails.ui.MoviesDetailsScreen
 import kotlinx.coroutines.flow.StateFlow
 
 @VisibleForTesting
-@Suppress("ktlint:standard:property-naming")
+@Suppress("TopLevelPropertyNaming", "ktlint:standard:property-naming")
 internal const val movieIdArg = "movieId"
 
-@Suppress("ktlint:standard:property-naming")
+@Suppress("TopLevelPropertyNaming", "ktlint:standard:property-naming")
 const val movieDetailsRoutePattern = "movie/{$movieIdArg}"
 
 internal class MovieDetailsArg(val movieId: StateFlow<Long>) {

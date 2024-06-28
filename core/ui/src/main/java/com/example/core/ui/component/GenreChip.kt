@@ -14,9 +14,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.example.core.common.annotation.ExcludeFromGeneratedCoverageReport
-import com.example.design_system.core.annotation.ThemePreviews
-import com.example.design_system.core.theme.PlayGround
-import com.example.design_system.core.theme.PlayGroundTheme
+import com.example.designSystem.core.annotation.ThemePreviews
+import com.example.designSystem.core.theme.PlayGround
+import com.example.designSystem.core.theme.PlayGroundTheme
 
 
 @ThemePreviews

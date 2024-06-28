@@ -36,10 +36,10 @@ import com.example.core.model.Person
 import com.example.core.model.PersonMovie
 import com.example.core.ui.component.Background
 import com.example.core.ui.component.PersonItemView
-import com.example.design_system.core.annotation.ThemePreviews
-import com.example.design_system.core.theme.PlayGround
-import com.example.design_system.core.theme.PlayGroundTheme
-import com.example.design_system.core.theme.TwoAndHalfHorizontalSpacer
+import com.example.designSystem.core.annotation.ThemePreviews
+import com.example.designSystem.core.theme.PlayGround
+import com.example.designSystem.core.theme.PlayGroundTheme
+import com.example.designSystem.core.theme.TwoAndHalfHorizontalSpacer
 import com.example.screens.people.R
 import com.example.screens.people.viewmodel.PeopleViewModel
 import kotlinx.coroutines.flow.flowOf

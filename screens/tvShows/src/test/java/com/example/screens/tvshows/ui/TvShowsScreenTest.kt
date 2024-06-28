@@ -23,7 +23,6 @@ import androidx.paging.compose.collectAsLazyPagingItems
 import com.example.core.model.TVShow
 import com.example.core.model.TVShowsFilterItem
 import com.example.core.test.util.TvShowsTestData
-import com.google.common.truth.Truth
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.flow.flowOf
 import org.junit.Before

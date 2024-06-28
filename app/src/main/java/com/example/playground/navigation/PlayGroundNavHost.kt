@@ -13,6 +13,7 @@ import com.example.screens.people.navigation.peopleScreen
 import com.example.screens.settings.navigation.settingsScreen
 import com.example.screens.tvshows.navigation.tvShowsScreen
 
+@Suppress("UnusedPrivateMember")
 @Composable
 fun PlayGroundNavHost(
     navController: NavHostController,

@@ -38,11 +38,11 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.TextUnit
 import com.example.core.common.annotation.ExcludeFromGeneratedCoverageReport
 import com.example.core.ui.R
-import com.example.design_system.core.annotation.ThemePreviews
-import com.example.design_system.core.component.PlayGroundButton
-import com.example.design_system.core.theme.OneHorizontalSpacer
-import com.example.design_system.core.theme.PlayGround
-import com.example.design_system.core.theme.PlayGroundTheme
+import com.example.designSystem.core.annotation.ThemePreviews
+import com.example.designSystem.core.component.PlayGroundButton
+import com.example.designSystem.core.theme.OneHorizontalSpacer
+import com.example.designSystem.core.theme.PlayGround
+import com.example.designSystem.core.theme.PlayGroundTheme
 
 @Composable
 fun MovieDetailsText(

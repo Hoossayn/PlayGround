@@ -30,9 +30,9 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
 import com.example.core.common.annotation.ExcludeFromGeneratedCoverageReport
-import com.example.design_system.core.annotation.ThemePreviews
-import com.example.design_system.core.theme.PlayGround
-import com.example.design_system.core.theme.PlayGroundTheme
+import com.example.designSystem.core.annotation.ThemePreviews
+import com.example.designSystem.core.theme.PlayGround
+import com.example.designSystem.core.theme.PlayGroundTheme
 import com.example.playground.R
 import com.example.screens.movies.navigation.moviesRoutePattern
 import com.example.screens.people.navigation.peopleNavPattern

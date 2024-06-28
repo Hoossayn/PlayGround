@@ -1,6 +1,7 @@
 
 
 @file:Suppress("ktlint:standard:property-naming")
+
 package com.example.convention
 
 object Config {

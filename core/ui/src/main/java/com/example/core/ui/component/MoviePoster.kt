@@ -8,7 +8,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -26,9 +25,9 @@ import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import com.example.core.common.annotation.ExcludeFromGeneratedCoverageReport
 import com.example.core.ui.R
-import com.example.design_system.core.annotation.ThemePreviews
-import com.example.design_system.core.theme.PlayGround
-import com.example.design_system.core.theme.PlayGroundTheme
+import com.example.designSystem.core.annotation.ThemePreviews
+import com.example.designSystem.core.theme.PlayGround
+import com.example.designSystem.core.theme.PlayGroundTheme
 import com.valentinilk.shimmer.Shimmer
 import com.valentinilk.shimmer.ShimmerBounds
 import com.valentinilk.shimmer.rememberShimmer

@@ -16,7 +16,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.core.common.injection.IoDispatcher
 import com.example.core.model.ThemeConfig
-import com.example.design_system.core.theme.PlayGroundTheme
+import com.example.designSystem.core.theme.PlayGroundTheme
 import com.example.playground.viewmodel.AppUIState
 import com.example.playground.viewmodel.AppViewModel
 import dagger.hilt.android.AndroidEntryPoint

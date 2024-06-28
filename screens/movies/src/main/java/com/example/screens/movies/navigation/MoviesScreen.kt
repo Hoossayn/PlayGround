@@ -8,6 +8,7 @@ import com.example.core.ui.navigation.popEnterTransition
 import com.example.core.ui.navigation.popExitTransition
 import com.example.screens.movies.screen.MoviesScreen
 
+@Suppress("TopLevelPropertyNaming", "ktlint:standard:property-naming")
 const val  moviesRoutePattern = "/movies"
 
 fun NavGraphBuilder.moviesScreen(onMovieClick: (Long) -> Unit) {

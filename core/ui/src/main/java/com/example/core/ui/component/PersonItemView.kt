@@ -37,10 +37,10 @@ import coil.compose.rememberAsyncImagePainter
 import coil.request.ImageRequest
 import com.example.core.common.annotation.ExcludeFromGeneratedCoverageReport
 import com.example.core.ui.R
-import com.example.design_system.core.annotation.ThemePreviews
-import com.example.design_system.core.theme.OneVerticalSpacer
-import com.example.design_system.core.theme.PlayGround
-import com.example.design_system.core.theme.PlayGroundTheme
+import com.example.designSystem.core.annotation.ThemePreviews
+import com.example.designSystem.core.theme.OneVerticalSpacer
+import com.example.designSystem.core.theme.PlayGround
+import com.example.designSystem.core.theme.PlayGroundTheme
 
 
 @ThemePreviews

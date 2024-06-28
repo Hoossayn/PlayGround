@@ -6,7 +6,6 @@ import androidx.compose.ui.test.ExperimentalTestApi
 import androidx.compose.ui.test.assertCountEquals
 import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.assertIsNotSelected
-import androidx.compose.ui.test.assertIsSelectable
 import androidx.compose.ui.test.assertIsSelected
 import androidx.compose.ui.test.hasProgressBarRangeInfo
 import androidx.compose.ui.test.hasText
@@ -24,7 +23,7 @@ import com.example.core.model.UserEditableSettings
 import com.example.core.test.rule.assertAreDisplayed
 import com.example.core.test.util.fakeSuccessImageLoader
 import com.example.screens.settings.viewModel.SettingsUiState
-import com.google.common.truth.Truth.*
+import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

@@ -21,7 +21,6 @@ import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
 import com.example.core.ui.R
 import com.example.screens.moviedetails.ui.MOVIE_DETAILS_RECOMMENDATIONS_ROW
-import com.google.common.truth.Truth
 import com.google.common.truth.Truth.assertThat
 import org.junit.Before
 import org.junit.Rule

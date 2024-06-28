@@ -12,9 +12,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.semantics
 import com.example.core.common.annotation.ExcludeFromGeneratedCoverageReport
 import com.example.core.ui.R
-import com.example.design_system.core.annotation.ThemePreviews
-import com.example.design_system.core.theme.PlayGround
-import com.example.design_system.core.theme.PlayGroundTheme
+import com.example.designSystem.core.annotation.ThemePreviews
+import com.example.designSystem.core.theme.PlayGround
+import com.example.designSystem.core.theme.PlayGroundTheme
 
 @Composable
 fun TrailerButton(

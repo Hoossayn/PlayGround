@@ -17,10 +17,9 @@ dependencyResolutionManagement {
 }
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-
 rootProject.name = "PlayGround"
 include(":app")
-include(":core:design-system")
+include(":core:designSystem")
 include(":core:common")
 include(":core:ui")
 include(":core:model")

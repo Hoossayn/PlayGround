@@ -8,6 +8,7 @@ import com.example.core.ui.navigation.popEnterTransition
 import com.example.core.ui.navigation.popExitTransition
 import com.example.screens.settings.ui.SettingsScreen
 
+@Suppress("TopLevelPropertyNaming", "ktlint:standard:property-naming")
 const val settingsNavPattern = "/settings"
 
 fun NavGraphBuilder.settingsScreen(onLoginClick: () -> Unit) {
