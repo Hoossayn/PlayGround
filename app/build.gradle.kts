@@ -11,7 +11,6 @@ plugins {
 
 android {
     namespace = "com.example.playground"
-    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.playground"
@@ -117,8 +116,8 @@ dependencies {
 
     implementation(libs.com.google.accompanist.systemuicontroller)
 
-    //testImplementation(projects.core.test)
-    //androidTestImplementation(projects.core.test)
+    testImplementation(projects.core.test)
+    androidTestImplementation(projects.core.test)
 }
 
 secrets {
