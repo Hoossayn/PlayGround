@@ -10,4 +10,9 @@ plugins {
     alias(libs.plugins.io.github.takahirom.roborazzi) apply false
     alias(libs.plugins.com.google.devtools.ksp) apply false
     alias(libs.plugins.com.android.test) apply false
+
+    // add detekt and ktlint
+    alias(libs.plugins.io.gitlab.arturbosch.detekt)
+    id("com.example.playground.build.detekt")
+    id("com.example.playground.build.ktlint")
 }
