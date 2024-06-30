@@ -6,7 +6,7 @@ import com.example.core.network.datasource.MoviesRemoteDataSource
 import com.example.core.test.util.testMovies
 import javax.inject.Inject
 
-class FakeMoviesRemoteDataSource @Inject constructor(): MoviesRemoteDataSource {
+class FakeMoviesRemoteDataSource @Inject constructor() : MoviesRemoteDataSource {
     override suspend fun nowPlayingMovies(query: MoviesQuery): List<Movie> = testMovies()
 
     override suspend fun popularMovies(query: MoviesQuery): List<Movie> = testMovies()

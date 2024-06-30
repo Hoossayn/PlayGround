@@ -32,7 +32,7 @@ const val TEST_ID = 0L
 
 @RunWith(JUnit4::class)
 class MoviesDetailViewModelTest {
-    @get: Rule
+    @get:Rule
     val mainDispatcherRule = MainDispatcherRule()
 
     private lateinit var movieDetailsViewModel: MovieDetailsViewModel

@@ -23,7 +23,7 @@ import javax.inject.Inject
 class MovieDetailsViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     private val movieDetailsRepository: MovieDetailsRepository,
-): ViewModel() {
+) : ViewModel() {
     private val movieId = MovieDetailsArg(savedStateHandle).movieId
 
     @Suppress("MagicNumber")

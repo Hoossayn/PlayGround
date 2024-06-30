@@ -10,7 +10,7 @@ import dagger.hilt.android.testing.HiltTestApplication
  * A custom runner to setup the instrumented application class for test with Hilt
  *
  */
-class PlayGroundTestRunner: AndroidJUnitRunner() {
+class PlayGroundTestRunner : AndroidJUnitRunner() {
     override fun newApplication(
         cl: ClassLoader?,
         className: String?,

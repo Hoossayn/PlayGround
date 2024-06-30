@@ -12,7 +12,7 @@ import com.example.core.model.UserEditableSettings
 import javax.inject.Inject
 
 @HiltViewModel
-class AppViewModel @Inject constructor(localStorage: LocalStorage): ViewModel() {
+class AppViewModel @Inject constructor(localStorage: LocalStorage) : ViewModel() {
     @Suppress("MagicNumber")
     val uiState: StateFlow<AppUIState> = localStorage.userData().map { userData ->
             AppUIState.Success(

@@ -30,7 +30,7 @@ interface MovieDetailsRepository {
 class DefaultMovieDetailsRepository @Inject constructor(
     private val remoteDataSource: MovieDetailsRemoteDataSource,
     @IoDispatcher private val dispatcher: CoroutineDispatcher,
-): MovieDetailsRepository {
+) : MovieDetailsRepository {
     override fun movieDetails(movieId: Long): Flow<Outcome<MovieDetails>> = flow {
         try {
             val response = remoteDataSource.movieDetails(movieId)

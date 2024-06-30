@@ -26,7 +26,7 @@ interface TvShowsRepository {
 class DefaultTvShowsRepository @Inject constructor(
     private val tvSeriesListApi: TVShowsListApi,
     @IoDispatcher private val defaultDispatcher: CoroutineDispatcher,
-): TvShowsRepository {
+) : TvShowsRepository {
     override suspend fun airingToday(filter: MoviesFilter): List<TVShow> =
         withContext(defaultDispatcher) {
             tvSeriesListApi.airingToday(

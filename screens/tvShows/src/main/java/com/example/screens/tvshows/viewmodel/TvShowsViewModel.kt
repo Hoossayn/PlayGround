@@ -24,7 +24,7 @@ import javax.inject.Inject
 class TvShowsViewModel @Inject constructor(
     private val tvShowsRepository: TvShowsRepository,
     @IoDispatcher private val dispatcher: CoroutineDispatcher,
-): ViewModel() {
+) : ViewModel() {
     @Suppress("ktlint:standard:property-naming")
     private val _tvShowFilters = MutableStateFlow(
         listOf(

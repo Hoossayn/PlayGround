@@ -88,7 +88,7 @@ class MoviesViewModel @Inject constructor(
     }.flowOn(dispatcher)
 
     sealed interface Event {
-        data class OnFilterSelected(val filter: MovieListFilterItem.FilterType): Event
+        data class OnFilterSelected(val filter: MovieListFilterItem.FilterType) : Event
     }
 
     fun onEvent(event: Event) {
