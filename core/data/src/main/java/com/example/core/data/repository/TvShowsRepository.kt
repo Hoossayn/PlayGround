@@ -66,8 +66,8 @@ class DefaultTvShowsRepository
         }
 }
 
-class TvShowsListPagingSource(private val fetchMovies: suspend (Int) -> List<TVShow>)
-    : PagingSource<Int, TVShow>() {
+class TvShowsListPagingSource(private val fetchMovies: suspend (Int) -> List<TVShow>) :
+    PagingSource<Int, TVShow>() {
     override fun getRefreshKey(state: PagingState<Int, TVShow>): Int? {
         return state.anchorPosition?.let {
             state.closestPageToPosition(it)?.prevKey?.plus(1)
