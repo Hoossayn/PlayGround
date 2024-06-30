@@ -161,7 +161,7 @@ sealed interface BottomNavItem {
 private fun RowScope.addNavBarItem(
     screen: BottomNavItem,
     selected: Boolean,
-    onClick: () -> Unit
+    onClick: () -> Unit,
 ) {
     NavigationBarItem(
         modifier = Modifier.testTag("${screen.title().lowercase().replace(" ", "_")}_nav"),

@@ -22,7 +22,7 @@ import javax.inject.Inject
 @HiltViewModel
 class MovieDetailsViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
-    private val movieDetailsRepository: MovieDetailsRepository
+    private val movieDetailsRepository: MovieDetailsRepository,
 ): ViewModel() {
     private val movieId = MovieDetailsArg(savedStateHandle).movieId
 

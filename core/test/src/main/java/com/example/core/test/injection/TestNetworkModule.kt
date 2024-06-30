@@ -19,7 +19,7 @@ import javax.inject.Singleton
 abstract class TestNetworkModule {
     @[Binds Singleton]
     abstract fun MoviesRemoteDataSource(
-        dataSource: FakeMoviesRemoteDataSource
+        dataSource: FakeMoviesRemoteDataSource,
     ): MoviesRemoteDataSource
 
     @[Binds Singleton]

@@ -15,7 +15,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
-    private val localStorage: LocalStorage
+    private val localStorage: LocalStorage,
 ): ViewModel() {
     val settingsUiState: StateFlow<SettingsUiState> = localStorage.userData()
         .map {

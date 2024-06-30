@@ -89,7 +89,7 @@ const val MORE_TITLE_TEST_TAG = "more_title"
 @Composable
 fun SettingsScreen(
     viewModel: SettingsViewModel = hiltViewModel(),
-    onLoginClick: () -> Unit
+    onLoginClick: () -> Unit,
 ) {
     val settingsUiState by viewModel.settingsUiState.collectAsStateWithLifecycle()
 

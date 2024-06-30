@@ -111,7 +111,7 @@ fun MoviesScreen(
     movieLazyPagingItems: LazyPagingItems<Movie>,
     filters: List<MovieListFilterItem> = emptyList(),
     onMovieClick: (movieId: Long) -> Unit,
-    onFilterItemSelected: (MovieListFilterItem.FilterType) -> Unit = {}
+    onFilterItemSelected: (MovieListFilterItem.FilterType) -> Unit = {},
 ) {
     val shimmerInstance = rememberShimmer(shimmerBounds = ShimmerBounds.Window)
     var query by rememberSaveable { mutableStateOf("") }
