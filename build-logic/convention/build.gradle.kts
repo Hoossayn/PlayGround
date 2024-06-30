@@ -19,8 +19,6 @@ tasks.withType<KotlinCompile>().configureEach {
     }
 }
 
-
-
 dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
@@ -88,6 +86,5 @@ gradlePlugin {
             id = "com.example.playground.android.library.compose"
             implementationClass = "AndroidLibraryComposeConventionPlugin"
         }
-
     }
 }

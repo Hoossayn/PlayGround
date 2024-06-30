@@ -9,7 +9,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 /**
  * Configure Compose specific options.
  */
-internal fun Project.configureAndroidCompose(commonExtension: CommonExtension<*, *, *, *, *,>) {
+internal fun Project.configureAndroidCompose(commonExtension: CommonExtension<*, *, *, *, *>) {
     commonExtension.apply {
         buildFeatures {
             compose = true
@@ -50,8 +50,7 @@ internal fun Project.configureAndroidCompose(commonExtension: CommonExtension<*,
 
 private fun Project.buildComposeMetricsParameters(): List<String> {
     val metricParameters = mutableListOf<String>()
-    val enableMetricsProvider = project.providers
-        .gradleProperty("enableComposeCompilerMetrics")
+    val enableMetricsProvider = project.providers.gradleProperty("enableComposeCompilerMetrics")
     val enableMetrics = (enableMetricsProvider.orNull == "true")
     if (enableMetrics) {
         val metricsFolder = layout.buildDirectory.file("compose-metrics")

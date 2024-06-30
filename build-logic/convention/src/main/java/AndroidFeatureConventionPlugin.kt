@@ -21,7 +21,6 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 implementation(project(":core:ui"))
                 implementation(project(":core:data"))
                 implementation(project(":core:network"))
-                //implementation(project(":core:domain"))
                 implementation(project(":core:model"))
 
                 testImplementation(kotlin("test"))

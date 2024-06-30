@@ -19,14 +19,14 @@ internal const val movieIdArg = "movieId"
 const val movieDetailsRoutePattern = "movie/{$movieIdArg}"
 
 internal class MovieDetailsArg(val movieId: StateFlow<Long>) {
-    constructor(savedStateHandle: SavedStateHandle): this(
-        movieId = checkNotNull(savedStateHandle.getStateFlow(movieIdArg, 0L))
+    constructor(savedStateHandle: SavedStateHandle) : this(
+        movieId = checkNotNull(savedStateHandle.getStateFlow(movieIdArg, 0L)),
     )
 }
 
 fun NavController.navigateToMovieDetails(
     movieId: Long,
-    navOptions: NavOptions? = null
+    navOptions: NavOptions? = null,
 ) {
     this.navigate(route = "movie/$movieId", navOptions = navOptions)
 }
@@ -35,14 +35,14 @@ fun NavGraphBuilder.movieDetailsScreen(
     onMovieItemClick: (Long) -> Unit,
     onWatchTrailerClick: () -> Unit = { },
     onNavigateUp: () -> Unit,
-){
+) {
     composable(
         route = movieDetailsRoutePattern,
         arguments = listOf(
-            navArgument(movieIdArg){
+            navArgument(movieIdArg) {
                 type = NavType.LongType
                 defaultValue = 0L
-            }
+            },
         )
     ) {
         MoviesDetailsScreen(
