@@ -15,8 +15,11 @@ import javax.inject.Inject
 
 interface MovieListRepository {
     suspend fun nowPlayingMovies(filter: MoviesFilter): List<Movie>
+
     suspend fun popularMovies(filter: MoviesFilter): List<Movie>
+
     suspend fun topRatedMovies(filter: MoviesFilter): List<Movie>
+
     suspend fun upComingMovies(filter: MoviesFilter): List<Movie>
 }
 

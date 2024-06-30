@@ -45,6 +45,7 @@ class SettingsViewModel @Inject constructor(
     }
 
 }
+
 sealed interface SettingsUiState {
     data object Loading : SettingsUiState
 

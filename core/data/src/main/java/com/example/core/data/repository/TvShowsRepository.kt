@@ -15,8 +15,11 @@ import javax.inject.Inject
 
 interface TvShowsRepository {
     suspend fun airingToday(filter: MoviesFilter): List<TVShow>
+
     suspend fun onTheAir(filter: MoviesFilter): List<TVShow>
+
     suspend fun popular(filter: MoviesFilter): List<TVShow>
+
     suspend fun topRated(filter: MoviesFilter): List<TVShow>
 }
 

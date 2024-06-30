@@ -255,6 +255,7 @@ fun MoviesScreen(
         }
     }
 }
+
 @Composable
 private fun filterLabelFor(filterItem: MovieListFilterItem): String {
     return when (filterItem.type) {

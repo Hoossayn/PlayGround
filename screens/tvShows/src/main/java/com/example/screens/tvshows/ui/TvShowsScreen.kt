@@ -413,6 +413,7 @@ fun TVShowsScreenPreview() {
         ) {}
     }
 }
+
 @ExcludeFromGeneratedCoverageReport
 private fun testFilters() = listOf(
     TVShowsFilterItem(
