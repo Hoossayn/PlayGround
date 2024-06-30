@@ -101,5 +101,4 @@ class TvShowsViewModel
         currentFilter.update { filter }
         _tvShowFilters.update { updatedFilters }
     }
-
 }

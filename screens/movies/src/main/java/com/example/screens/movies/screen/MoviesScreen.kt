@@ -250,7 +250,6 @@ fun MoviesScreen(
                     items = filters.map { Pair(filterLabelFor(filterItem = it), it.isSelected) },
                     onItemSelected = { filterItemSelected(filters[it].type) },
                 )
-
             }
         }
     }

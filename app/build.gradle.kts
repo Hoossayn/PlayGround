@@ -6,7 +6,6 @@ plugins {
     id("com.example.playground.android.application.compose")
     id("com.example.playground.android.navigation")
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
-
 }
 
 android {
@@ -57,7 +56,6 @@ android {
             isReturnDefaultValues = true
         }
     }
-
 }
 
 dependencies {

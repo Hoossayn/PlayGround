@@ -122,5 +122,4 @@ object NetworkModule {
     @[Provides Singleton]
     fun providePeopleListsApi(retrofit: Retrofit): PeopleListApi =
         retrofit.create(PeopleListApi::class.java)
-
 }

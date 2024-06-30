@@ -57,5 +57,4 @@ dependencies {
 
     testImplementation(project(":core:test"))
     androidTestImplementation(project(":core:test"))
-
 }

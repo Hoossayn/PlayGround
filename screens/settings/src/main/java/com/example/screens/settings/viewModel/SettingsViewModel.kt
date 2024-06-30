@@ -45,7 +45,6 @@ class SettingsViewModel
     fun onDynamicColourPreferenceChanged(useDynamicColor: Boolean) {
         viewModelScope.launch { localStorage.setUseDynamicColor(useDynamicColor) }
     }
-
 }
 
 sealed interface SettingsUiState {

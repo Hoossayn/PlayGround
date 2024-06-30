@@ -29,5 +29,4 @@ abstract class TestDataModule {
     abstract fun provideMovieDetailsRepository(
         movieDetailsRepository: FakeMovieDetailsRepository,
     ): MovieDetailsRepository
-
 }

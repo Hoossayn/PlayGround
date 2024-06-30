@@ -1,7 +1,6 @@
 plugins {
     id("com.example.playground.android.library")
     id("com.example.playground.android.library.compose")
-
 }
 
 android {

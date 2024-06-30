@@ -29,5 +29,4 @@ class AppViewModel
             initialValue = AppUIState.Loading,
             started = SharingStarted.WhileSubscribed(5_000)
         )
-
 }

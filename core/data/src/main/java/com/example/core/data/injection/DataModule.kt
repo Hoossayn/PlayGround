@@ -27,6 +27,4 @@ interface DataModule {
 
     @Binds
     fun providePeoplesRepository(repository: DefaultPeopleListRepository): PeopleListRepository
-
-
 }

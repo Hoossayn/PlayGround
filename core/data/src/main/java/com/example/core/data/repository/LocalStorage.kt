@@ -36,7 +36,6 @@ interface LocalStorage {
     suspend fun setUseDynamicColor(useDynamicColor: Boolean)
 
     suspend fun logout()
-
 }
 
 class UserPreferencesSerializer

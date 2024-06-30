@@ -48,7 +48,6 @@ class DefaultMovieListRepository
         withContext(defaultDispatcher) {
             moviesRemoteDataSource.upcomingMovies(filter.toQuery())
         }
-
 }
 
 class MoviesListPagingSource(private val fetchTvShows: suspend (Int) -> List<Movie>):

@@ -2,9 +2,7 @@ plugins {
     id("com.example.playground.android.library")
     id("com.example.playground.android.hilt")
     id("com.example.playground.android.navigation")
-
     id("com.google.android.libraries.mapsplatform.secrets-gradle-plugin")
-
 }
 
 android {
@@ -67,7 +65,6 @@ dependencies {
     androidTestImplementation(projects.core.test)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.androidx.test.espresso.core)
-
 }
 
 secrets {

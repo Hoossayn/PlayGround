@@ -249,7 +249,6 @@ class MovieScreenTest {
 
         assertThat(onMovieClickCounter).isEqualTo(1)
     }
-
 }
 
 
