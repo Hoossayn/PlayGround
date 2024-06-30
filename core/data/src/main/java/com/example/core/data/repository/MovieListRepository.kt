@@ -23,9 +23,11 @@ interface MovieListRepository {
     suspend fun upComingMovies(filter: MoviesFilter): List<Movie>
 }
 
-class DefaultMovieListRepository @Inject constructor(
-    private val moviesRemoteDataSource: MoviesRemoteDataSource,
-    @IoDispatcher private val defaultDispatcher: CoroutineDispatcher,
+class DefaultMovieListRepository
+    @Inject
+    constructor(
+        private val moviesRemoteDataSource: MoviesRemoteDataSource,
+        @IoDispatcher private val defaultDispatcher: CoroutineDispatcher,
     ) : MovieListRepository {
     override suspend fun nowPlayingMovies(filter: MoviesFilter): List<Movie> =
         withContext(defaultDispatcher) {

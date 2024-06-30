@@ -20,9 +20,11 @@ import kotlinx.coroutines.flow.stateIn
 import javax.inject.Inject
 
 @HiltViewModel
-class MovieDetailsViewModel @Inject constructor(
-    savedStateHandle: SavedStateHandle,
-    private val movieDetailsRepository: MovieDetailsRepository,
+class MovieDetailsViewModel
+    @Inject
+    constructor(
+        savedStateHandle: SavedStateHandle,
+        private val movieDetailsRepository: MovieDetailsRepository,
 ) : ViewModel() {
     private val movieId = MovieDetailsArg(savedStateHandle).movieId
 

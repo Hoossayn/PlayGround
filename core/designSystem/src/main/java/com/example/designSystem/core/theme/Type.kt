@@ -1,4 +1,5 @@
 @file:Suppress("ktlint:standard:filename", "MatchingDeclarationName", "MagicNumber")
+
 package com.example.designSystem.core.theme
 
 import androidx.compose.material3.Typography

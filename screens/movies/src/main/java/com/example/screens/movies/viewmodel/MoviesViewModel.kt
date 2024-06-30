@@ -21,8 +21,10 @@ import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 
 @HiltViewModel
-class MoviesViewModel @Inject constructor(
-    private val movieListRepository: MovieListRepository,
+class MoviesViewModel
+    @Inject
+    constructor(
+        private val movieListRepository: MovieListRepository,
     @IoDispatcher private val dispatcher: CoroutineDispatcher,
 ) : ViewModel() {
     private val _availableFilters = MutableStateFlow(

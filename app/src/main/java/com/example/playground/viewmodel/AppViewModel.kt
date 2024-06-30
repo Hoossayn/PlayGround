@@ -12,20 +12,22 @@ import com.example.core.model.UserEditableSettings
 import javax.inject.Inject
 
 @HiltViewModel
-class AppViewModel @Inject constructor(localStorage: LocalStorage) : ViewModel() {
-    @Suppress("MagicNumber")
-    val uiState: StateFlow<AppUIState> = localStorage.userData().map { userData ->
-            AppUIState.Success(
-                UserEditableSettings(
-                    isLoggedIn = userData.isLoggedIn,
-                    themeConfig = userData.themeConfig,
-                    isDynamicColor = userData.usDynamicColor,
+class AppViewModel
+    @Inject
+    constructor(localStorage: LocalStorage) : ViewModel() {
+        @Suppress("MagicNumber")
+        val uiState: StateFlow<AppUIState> = localStorage.userData().map { userData ->
+                AppUIState.Success(
+                    UserEditableSettings(
+                        isLoggedIn = userData.isLoggedIn,
+                        themeConfig = userData.themeConfig,
+                        isDynamicColor = userData.usDynamicColor,
+                    )
                 )
-            )
-    }.stateIn(
-        scope = viewModelScope,
-        initialValue = AppUIState.Loading,
-        started = SharingStarted.WhileSubscribed(5_000)
-    )
+        }.stateIn(
+            scope = viewModelScope,
+            initialValue = AppUIState.Loading,
+            started = SharingStarted.WhileSubscribed(5_000)
+        )
 
 }

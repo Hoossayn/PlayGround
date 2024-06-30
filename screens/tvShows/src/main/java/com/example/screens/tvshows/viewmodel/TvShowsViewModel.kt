@@ -21,8 +21,10 @@ import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 
 @HiltViewModel
-class TvShowsViewModel @Inject constructor(
-    private val tvShowsRepository: TvShowsRepository,
+class TvShowsViewModel
+    @Inject
+    constructor(
+        private val tvShowsRepository: TvShowsRepository,
     @IoDispatcher private val dispatcher: CoroutineDispatcher,
 ) : ViewModel() {
     @Suppress("ktlint:standard:property-naming")
