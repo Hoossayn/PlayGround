@@ -56,7 +56,7 @@ class MoviesListPagingSource(private val fetchTvShows: suspend (Int) -> List<Mov
     }
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Movie> {
-        return  try {
+        return try {
             val pageNumber = params.key ?: 1
             val response = fetchTvShows(pageNumber)
             val prevKey = if (pageNumber > 1) pageNumber - 1 else null

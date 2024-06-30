@@ -70,7 +70,7 @@ class MovieScreenTest {
         composeTestRule.setContent {
             MoviesScreen(
                 filters = testFilters(),
-                movieLazyPagingItems =  flowOf(
+                movieLazyPagingItems = flowOf(
                     PagingData.from(
                         data = emptyList<Movie>(),
                         sourceLoadStates = LoadStates(

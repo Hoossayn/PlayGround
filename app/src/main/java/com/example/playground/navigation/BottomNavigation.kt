@@ -88,7 +88,7 @@ fun BottomNavigation(
                         selected = currentRoute == item.route,
                         onClick = {
                             navController.navigate(
-                                route =  item.route,
+                                route = item.route,
                                 navOptions = navOptions {
                                     popUpTo(navController.graph.findStartDestination().id) {
                                         saveState = true

@@ -88,7 +88,7 @@ class MainActivity : ComponentActivity() {
 @Composable
 private fun shouldUseDarkTheme(uiState: AppUIState): Boolean = when (uiState) {
     AppUIState.Loading -> isSystemInDarkTheme()
-    is  AppUIState.Success -> when (uiState.settings.themeConfig) {
+    is AppUIState.Success -> when (uiState.settings.themeConfig) {
         ThemeConfig.FOLLOW_SYSTEM -> isSystemInDarkTheme()
         ThemeConfig.LIGHT -> false
         ThemeConfig.DARK -> true
