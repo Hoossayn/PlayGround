@@ -91,7 +91,7 @@ class MoviesViewModel @Inject constructor(
         data class OnFilterSelected(val filter: MovieListFilterItem.FilterType): Event
     }
 
-    fun onEvent(event:Event) {
+    fun onEvent(event: Event) {
         when (event){
             is Event.OnFilterSelected -> {
                 val updatedFilters = _availableFilters.value.map { filterItem ->
