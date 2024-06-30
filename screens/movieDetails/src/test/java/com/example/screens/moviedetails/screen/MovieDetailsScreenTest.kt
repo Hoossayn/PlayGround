@@ -415,7 +415,7 @@ class MovieDetailsScreenTest {
                 .assertIsDisplayed()
                 .assertHasClickAction()
                 .performClick()
-            //assertEquals(1, onWatchTrailerClick)
+            // assertEquals(1, onWatchTrailerClick)
         }
     }
 

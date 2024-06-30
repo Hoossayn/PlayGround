@@ -55,7 +55,7 @@ dependencies {
     api(libs.androidx.paging.compose)
     testImplementation(libs.androidx.paging.common)
 
-    //testImplementation(project(":core:test"))
-    //androidTestImplementation(project(":core:test"))
+    testImplementation(project(":core:test"))
+    androidTestImplementation(project(":core:test"))
 
 }

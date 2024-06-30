@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
     }
 
    // @Inject
-    //lateinit var lazyStats: dagger.Lazy<JankStats>
+    // lateinit var lazyStats: dagger.Lazy<JankStats>
 
     @IoDispatcher
     @Inject
