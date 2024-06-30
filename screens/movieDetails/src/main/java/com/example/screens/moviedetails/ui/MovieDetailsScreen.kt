@@ -243,123 +243,119 @@ fun MoviesDetailsScreen(
                         )
 
                         @Suppress("MagicNumber")
-                        (Box(
-        modifier = Modifier
-            .fillMaxWidth()
-            .parallax(0.5f)
-            .height(450.dp)
-            .fillMaxWidth(),
-    ) {
-        Image(
-            modifier = Modifier
-                .fillMaxSize()
-                .graphicsLayer {
-                    alpha = state.toolbarState.progress
-                },
-            painter = if (isError.not() && !isLocalInspection) {
-                posterImageLoader
-            } else {
-                painterResource(com.example.core.ui.R.drawable.sample_poster)
-            },
-            contentDescription = movieDetails.title,
-            contentScale = ContentScale.FillWidth,
-        )
-        Box(
-            modifier = Modifier
-                .fillMaxSize()
-                .background(Brush.verticalGradient(colorStops)),
-        )
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .parallax(0.5f)
+                                .height(450.dp)
+                                .fillMaxWidth(),
+                        ) {
+                            Image(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .graphicsLayer {
+                                        alpha = state.toolbarState.progress
+                                    },
+                                painter = if (isError.not() && !isLocalInspection) {
+                                    posterImageLoader
+                                } else {
+                                    painterResource(com.example.core.ui.R.drawable.sample_poster)
+                                },
+                                contentDescription = movieDetails.title,
+                                contentScale = ContentScale.FillWidth,
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .background(Brush.verticalGradient(colorStops)),
+                            )
 
-        Column(modifier = Modifier.align(Alignment.BottomCenter)) {
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = PlayGround.spacing.two),
-                horizontalArrangement = Arrangement.spacedBy(
-                    PlayGround.spacing.two,
-                ),
-            ) {
-                MovieRating(
-                    modifier = Modifier.size(57.dp),
-                    rating = (movieDetails.voteAverage / MAX_MOVIE_RATING)
-                        .toFloat(),
-                )
-                Column(
-                    horizontalAlignment = Alignment.Start,
-                    verticalArrangement = Arrangement.spacedBy(
-                        PlayGround.spacing.half,
-                    ),
-                ) {
-                    Text(
-                        text = movieDetails.title,
-                        style = PlayGround.typography.titleLarge,
-                        color = primaryTextColor,
-                    )
-                    Row(
-                        horizontalArrangement = Arrangement.spacedBy(
-                            PlayGround.spacing.one,
-                        ),
-                        verticalAlignment = Alignment.CenterVertically,
-                    ) {
-                        Text(
-                            text = movieDetails.releaseDate.formatDate(),
-                            color = secondaryTextColor,
-                        )
-                        Text(text = "●", color = secondaryTextColor)
-                        Icon(
-                            painter = painterResource(
-                                id = com.example.core.ui.R.drawable.ic_clock,
-                            ),
-                            contentDescription = "runtime",
-                            tint = secondaryTextColor,
-                        )
-                        Text(
-                            text = formatRuntime(movieDetails.runtime),
-                            color = secondaryTextColor,
-                        )
-                    }
-                }
-            }
+                            Column(modifier = Modifier.align(Alignment.BottomCenter)) {
+                                Row(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .padding(horizontal = PlayGround.spacing.two),
+                                    horizontalArrangement = Arrangement.spacedBy(
+                                        PlayGround.spacing.two,
+                                    ),
+                                ) {
+                                    MovieRating(
+                                        modifier = Modifier.size(57.dp),
+                                        rating = (movieDetails.voteAverage / MAX_MOVIE_RATING)
+                                            .toFloat(),
+                                    )
+                                    Column(
+                                        horizontalAlignment = Alignment.Start,
+                                        verticalArrangement = Arrangement.spacedBy(
+                                            PlayGround.spacing.half,
+                                        ),
+                                    ) {
+                                        Text(
+                                            text = movieDetails.title,
+                                            style = PlayGround.typography.titleLarge,
+                                            color = primaryTextColor,
+                                        )
+                                        Row(
+                                            horizontalArrangement = Arrangement.spacedBy(
+                                                PlayGround.spacing.one,
+                                            ),
+                                            verticalAlignment = Alignment.CenterVertically,
+                                        ) {
+                                            Text(
+                                                text = movieDetails.releaseDate.formatDate(),
+                                                color = secondaryTextColor,
+                                            )
+                                            Text(text = "●", color = secondaryTextColor)
+                                            Icon(
+                                                painter = painterResource(
+                                                    id = com.example.core.ui.R.drawable.ic_clock,
+                                                ),
+                                                contentDescription = "runtime",
+                                                tint = secondaryTextColor,
+                                            )
+                                            Text(
+                                                text = formatRuntime(movieDetails.runtime),
+                                                color = secondaryTextColor,
+                                            )
+                                        }
+                                    }
+                                }
 
-            TwoVerticalSpacer()
-            HorizontalDivider(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(1.dp)
-                    .background(secondaryTextColor.copy(alpha = 0.1F)),
-            )
-        }
+                                TwoVerticalSpacer()
+                                HorizontalDivider(
+                                    modifier = Modifier
+                                        .fillMaxWidth()
+                                        .height(1.dp)
+                                        .background(secondaryTextColor.copy(alpha = 0.1F)),
+                                )
+                            }
 
-        // Fancy top nav bar
-        Row(
-            modifier = Modifier.statusBarsPadding(),
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(PlayGround.spacing.two),
-        ) {
-            Surface(
-                modifier = Modifier.padding(PlayGround.spacing.one),
-                color = Color.LightGray.copy(alpha = 0.3F),
-                shape = CircleShape,
-            ) {
-                IconButton(onClick = onNavigateUp) {
-                    Icon(
-                        imageVector = Icons.AutoMirrored.Default.ArrowBack,
-                        contentDescription = stringResource(
-                            id = com.example.core.ui.R.string.navigate_up,
-                        ),
-                    )
-                }
-            }
-            Text(movieDetails.title, style = PlayGround.typography.titleLarge)
-        }
-    })
+                            // Fancy top nav bar
+                            Row(
+                                modifier = Modifier.statusBarsPadding(),
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(PlayGround.spacing.two),
+                            ) {
+                                Surface(
+                                    modifier = Modifier.padding(PlayGround.spacing.one),
+                                    color = Color.LightGray.copy(alpha = 0.3F),
+                                    shape = CircleShape,
+                                ) {
+                                    IconButton(onClick = onNavigateUp) {
+                                        Icon(
+                                            imageVector = Icons.AutoMirrored.Default.ArrowBack,
+                                            contentDescription = stringResource(
+                                                id = com.example.core.ui.R.string.navigate_up,
+                                            ),
+                                        )
+                                    }
+                                }
+                                Text(movieDetails.title, style = PlayGround.typography.titleLarge)
+                            }
+                        }
                     },
                 ) {
                     val scrollState = rememberLazyListState()
-                    /*TrackScrollJank(
-                        scrollableState = scrollState,
-                        stateName = "peopleDetails:screen",
-                    )*/
 
                     LazyColumn(
                         modifier = Modifier
