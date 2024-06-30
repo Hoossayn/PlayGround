@@ -70,5 +70,4 @@ class DefaultMovieDetailsRepository
             emit(Failure(errorResponse = "Error getting recommended movies"))
         }
     }.flowOn(dispatcher)
-
 }
