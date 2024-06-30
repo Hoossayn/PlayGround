@@ -11,11 +11,11 @@ import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.compose.NavHost
 import androidx.navigation.testing.TestNavHostController
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.google.common.truth.Truth.assertThat
 import com.example.screens.movies.navigation.moviesRoutePattern
 import com.example.screens.movies.navigation.moviesScreen
 import com.example.screens.movies.screen.MOVIES_GRID_ITEMS_TEST_TAG
 import com.example.uitesthiltmanifest.HiltComponentActivity
+import com.google.common.truth.Truth.assertThat
 import dagger.hilt.android.testing.BindValue
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest

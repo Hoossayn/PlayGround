@@ -11,13 +11,13 @@ import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.compose.NavHost
 import androidx.navigation.testing.TestNavHostController
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.example.uitesthiltmanifest.HiltComponentActivity
 import com.google.common.truth.Truth
 import dagger.hilt.android.testing.BindValue
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
-import com.example.screens.settings.R
 import dagger.hilt.android.testing.HiltTestApplication
+import com.example.screens.settings.R
+import com.example.uitesthiltmanifest.HiltComponentActivity
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

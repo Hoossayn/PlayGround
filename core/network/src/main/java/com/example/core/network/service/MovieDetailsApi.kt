@@ -2,9 +2,9 @@ package com.example.core.network.service
 
 import com.example.core.network.Config
 import com.example.core.network.model.response.NetworkMovie
-import com.example.core.network.model.response.NetworkVideos
 import com.example.core.network.model.response.NetworkMovieDetails
 import com.example.core.network.model.response.NetworkMovieCredit
+import com.example.core.network.model.response.NetworkVideos
 import com.example.core.network.model.response.PagedNetworkResponse
 import retrofit2.http.GET
 import retrofit2.http.Path
