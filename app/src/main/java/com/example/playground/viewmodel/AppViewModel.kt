@@ -13,7 +13,7 @@ import com.example.core.model.UserEditableSettings
 import javax.inject.Inject
 
 @HiltViewModel
-class AppViewModel @Inject constructor (localStorage: LocalStorage): ViewModel() {
+class AppViewModel @Inject constructor(localStorage: LocalStorage): ViewModel() {
     @Suppress("MagicNumber")
     val uiState: StateFlow<AppUIState> = localStorage.userData().map { userData ->
             AppUIState.Success(
@@ -23,7 +23,7 @@ class AppViewModel @Inject constructor (localStorage: LocalStorage): ViewModel()
                     isDynamicColor = userData.usDynamicColor,
                 )
             )
-    }.stateIn (
+    }.stateIn(
         scope = viewModelScope,
         initialValue = AppUIState.Loading,
         started = SharingStarted.WhileSubscribed(5_000)

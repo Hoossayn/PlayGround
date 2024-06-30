@@ -40,13 +40,13 @@ fun PlayGroundApp(
     val bottomBarState = rememberSaveable { mutableStateOf(false) }
     val navBackStackEntry by navController.currentBackStackEntryAsState()
 
-    Scaffold (
+    Scaffold(
         modifier = Modifier.testTag(MAIN_CONTENT_TEST_TAG),
         bottomBar = { BottomNavigation(navController, bottomBarState.value) },
         snackbarHost = { SnackbarHost(snackBarHostState) }
     ){ innerPadding ->
 
-        Box (
+        Box(
             modifier = Modifier.padding(
                 bottom = max(
                     a = 0.dp,

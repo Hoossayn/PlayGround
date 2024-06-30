@@ -214,7 +214,7 @@ fun MoviesScreen(
 
                         if (movieLazyPagingItems.loadState.append == LoadState.Loading) {
                             item(span = StaggeredGridItemSpan.FullLine) {
-                                Box (
+                                Box(
                                     modifier = Modifier
                                         .fillMaxWidth()
                                         .wrapContentHeight()

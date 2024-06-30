@@ -83,7 +83,7 @@ fun BottomNavigation(
         content = {
             NavigationBar(modifier = Modifier.testTag(BOTTOM_NAV_BAR_TEST_TAG)) {
                 items.forEach {item ->
-                    addNavBarItem (
+                    addNavBarItem(
                         screen = item,
                         selected = currentRoute == item.route,
                         onClick = {

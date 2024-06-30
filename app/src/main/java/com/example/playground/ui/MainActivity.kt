@@ -70,7 +70,7 @@ class MainActivity : ComponentActivity() {
             val isDarkTheme = shouldUseDarkTheme(uiState = uiState)
             val isDynamicColor = shouldUseDynamicColor(uiState = uiState)
 
-            PlayGroundTheme (
+            PlayGroundTheme(
                 isDarkTheme = isDarkTheme,
                 isDynamicColor = isDynamicColor,
             ) {
