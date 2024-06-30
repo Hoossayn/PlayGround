@@ -162,7 +162,7 @@ private fun RowScope.addNavBarItem(
     screen: BottomNavItem,
     selected: Boolean,
     onClick: () -> Unit
-){
+) {
     NavigationBarItem(
         modifier = Modifier.testTag("${screen.title().lowercase().replace(" ", "_")}_nav"),
         label = { Text(text = screen.title()) },

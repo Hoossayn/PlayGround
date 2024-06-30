@@ -53,7 +53,7 @@ class SettingsScreenTest {
     }
 
     @Test
-    fun settingsScreen_settingsUiStateLoading_progressIndicatorIsShown(){
+    fun settingsScreen_settingsUiStateLoading_progressIndicatorIsShown() {
         composeTestRule.apply {
             setContent {
                 SettingsScreen(

@@ -32,7 +32,7 @@ class SettingsViewModel @Inject constructor(
             initialValue = SettingsUiState.Loading
         )
 
-    fun onLogout(){
+    fun onLogout() {
         viewModelScope.launch { localStorage.logout() }
     }
 
