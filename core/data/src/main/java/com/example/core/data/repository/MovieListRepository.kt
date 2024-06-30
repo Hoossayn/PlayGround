@@ -67,7 +67,7 @@ class MoviesListPagingSource(private val fetchTvShows: suspend (Int) -> List<Mov
             val nextKey = if (response.isNotEmpty()) pageNumber + 1 else null
 
             LoadResult.Page(data = response, prevKey = prevKey, nextKey = nextKey)
-        } catch (e: IOException){
+        } catch (e: IOException) {
             LoadResult.Error(e)
         } catch (e: HttpException) {
             LoadResult.Error(e)

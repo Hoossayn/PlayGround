@@ -8,7 +8,7 @@ import javax.inject.Inject
 
 class FakeMoviesRepository
     @Inject
-    constructor() : MovieListRepository{
+    constructor() : MovieListRepository {
         override suspend fun nowPlayingMovies(filter: MoviesFilter): List<Movie> = testMovies()
 
         override suspend fun popularMovies(filter: MoviesFilter): List<Movie> = testMovies()

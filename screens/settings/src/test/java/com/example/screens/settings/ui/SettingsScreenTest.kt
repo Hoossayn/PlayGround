@@ -83,7 +83,7 @@ class SettingsScreenTest {
                     ),
                     onChangeDynamicColorPreference = { onChangeDynamicColorPreference++ },
                     onChangeDarkThemeConfig = { onChangeDarkThemeConfig++ },
-                    onLoginClick = { onLoginClick++},
+                    onLoginClick = { onLoginClick++ },
                     onLogoutClick = { }
                 )
             }
@@ -114,7 +114,7 @@ class SettingsScreenTest {
                     ),
                     supportDynamicColor = true,
                     onChangeDynamicColorPreference = { onChangeDynamicColorPreference++ },
-                    onChangeDarkThemeConfig = {onChangeDarkThemeConfig++},
+                    onChangeDarkThemeConfig = { onChangeDarkThemeConfig++ },
                     onLoginClick = { onLoginClick++ },
                     onLogoutClick = {}
                 )

@@ -56,7 +56,7 @@ class SettingsViewModelTest {
                 )
             )
         }
-        verify(exactly = 1){localStorage.userData()}
+        verify(exactly = 1) { localStorage.userData() }
     }
 
     @Test

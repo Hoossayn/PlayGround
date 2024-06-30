@@ -29,7 +29,7 @@ const val MAIN_CONTENT_TEST_TAG = "mainContent"
 fun PlayGroundApp(
     navController: NavHostController = rememberNavController(),
     snackBarHostState: SnackbarHostState = remember { SnackbarHostState() },
-    onShowSnackBar: suspend (String, String?) -> Boolean = {msg, act ->
+    onShowSnackBar: suspend (String, String?) -> Boolean = { msg, act ->
         snackBarHostState.showSnackbar(
             message = msg,
             actionLabel = act,
@@ -44,7 +44,7 @@ fun PlayGroundApp(
         modifier = Modifier.testTag(MAIN_CONTENT_TEST_TAG),
         bottomBar = { BottomNavigation(navController, bottomBarState.value) },
         snackbarHost = { SnackbarHost(snackBarHostState) }
-    ){ innerPadding ->
+    ) { innerPadding ->
 
         Box(
             modifier = Modifier.padding(

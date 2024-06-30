@@ -90,7 +90,7 @@ class NavigationTest {
                     startDestination = movieDetailsRoutePattern
                 ) {
                     movieDetailsScreen(
-                        onMovieItemClick = { onMovieItemClick++},
+                        onMovieItemClick = { onMovieItemClick++ },
                         onNavigateUp = { onNavigateUp++ }
                     )
                 }

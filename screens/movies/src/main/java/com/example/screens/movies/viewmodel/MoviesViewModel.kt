@@ -94,7 +94,7 @@ class MoviesViewModel
     }
 
     fun onEvent(event: Event) {
-        when (event){
+        when (event) {
             is Event.OnFilterSelected -> {
                 val updatedFilters = _availableFilters.value.map { filterItem ->
                     if (filterItem.type == event.filter) {

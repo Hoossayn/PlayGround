@@ -93,7 +93,7 @@ fun SettingsScreen(
 ) {
     val settingsUiState by viewModel.settingsUiState.collectAsStateWithLifecycle()
 
-    val onLogoutClick: () -> Unit = {viewModel.onLogout()}
+    val onLogoutClick: () -> Unit = { viewModel.onLogout() }
     val onDynamicColorPreferenceChanged: (useDynamicColor: Boolean) -> Unit = {
         viewModel.onDynamicColourPreferenceChanged(it)
     }

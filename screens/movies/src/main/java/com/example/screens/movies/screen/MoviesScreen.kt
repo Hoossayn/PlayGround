@@ -218,7 +218,7 @@ fun MoviesScreen(
                                     modifier = Modifier
                                         .fillMaxWidth()
                                         .wrapContentHeight()
-                                ){
+                                ) {
                                     CircularProgressIndicator(
                                         modifier = Modifier
                                             .testTag(APPEND_LOAD_PROGRESS_TEST_TAG)

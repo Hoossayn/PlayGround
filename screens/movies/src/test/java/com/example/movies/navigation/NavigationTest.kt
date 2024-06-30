@@ -69,7 +69,7 @@ class NavigationTest {
 
     @Test
     fun moviesScreen_onLoad_addMoviesScreenToNavHost() {
-        composeTestRule.apply{
+        composeTestRule.apply {
             setContent {
                 navController = TestNavHostController(LocalContext.current)
                 navController.navigatorProvider.addNavigator(ComposeNavigator())

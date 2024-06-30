@@ -82,7 +82,7 @@ fun BottomNavigation(
         shrinkVertically(shrinkTowards = Alignment.Bottom) + fadeOut(),
         content = {
             NavigationBar(modifier = Modifier.testTag(BOTTOM_NAV_BAR_TEST_TAG)) {
-                items.forEach {item ->
+                items.forEach { item ->
                     addNavBarItem(
                         screen = item,
                         selected = currentRoute == item.route,

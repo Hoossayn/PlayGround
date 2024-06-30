@@ -64,7 +64,7 @@ class MoviesDetailViewModelTest {
         }
 
         assertEquals(savedStateHandle[movieIdArg], TEST_ID)
-        verify(exactly = 1) {movieDetailsRepository.movieDetails(TEST_ID)}
+        verify(exactly = 1) { movieDetailsRepository.movieDetails(TEST_ID) }
     }
 
     @Test
