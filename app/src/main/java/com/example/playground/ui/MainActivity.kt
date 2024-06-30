@@ -56,7 +56,7 @@ class MainActivity : ComponentActivity() {
         }
 
         splashScreen.setKeepOnScreenCondition{
-            when(uiState) {
+            when (uiState) {
                 AppUIState.Loading -> true
                 is AppUIState.Success -> false
             }
