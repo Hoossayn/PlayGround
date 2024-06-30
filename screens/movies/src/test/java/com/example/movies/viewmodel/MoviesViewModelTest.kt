@@ -20,7 +20,6 @@ import org.junit.Rule
 import org.junit.Test
 
 class MoviesViewModelTest {
-
     @get:Rule
     val mainDispatcherRule = MainDispatcherRule()
 

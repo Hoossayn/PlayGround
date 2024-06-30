@@ -32,7 +32,6 @@ const val TEST_ID = 0L
 
 @RunWith(JUnit4::class)
 class MoviesDetailViewModelTest {
-
     @get: Rule
     val mainDispatcherRule = MainDispatcherRule()
 

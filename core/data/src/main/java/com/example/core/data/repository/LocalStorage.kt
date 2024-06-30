@@ -20,7 +20,6 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 interface LocalStorage {
-
     fun isLoggedIn(): Flow<Boolean>
 
     fun userData(): Flow<UserData>

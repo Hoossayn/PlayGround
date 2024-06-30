@@ -37,7 +37,6 @@ import org.robolectric.shadows.ShadowLog
 )
 @HiltAndroidTest
 class NavigationTest {
-
     /**
      * Manages the components' state and is used to perform injection on your test
      */

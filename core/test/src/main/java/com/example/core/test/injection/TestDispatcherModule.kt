@@ -22,7 +22,6 @@ import javax.inject.Singleton
     replaces = [DispatchersModule::class],
 )
 object TestDispatcherModule {
-
     @[Provides Singleton]
     fun providesTestDispatcher(): TestDispatcher = UnconfinedTestDispatcher()
 

@@ -11,7 +11,6 @@ import dagger.hilt.components.SingletonComponent
 @Module
 @InstallIn(SingletonComponent::class)
 interface LocalStorageBinding {
-
     @Binds
     fun provideLocalStorage(storage: DefaultLocalStorage): LocalStorage
 }

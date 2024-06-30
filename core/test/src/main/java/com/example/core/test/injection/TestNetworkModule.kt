@@ -17,7 +17,6 @@ import javax.inject.Singleton
     replaces = [NetworkModule::class],
 )
 abstract class TestNetworkModule {
-
     @[Binds Singleton]
     abstract fun MoviesRemoteDataSource(
         dataSource: FakeMoviesRemoteDataSource
