@@ -11,13 +11,13 @@ import androidx.navigation.compose.ComposeNavigator
 import androidx.navigation.compose.NavHost
 import androidx.navigation.testing.TestNavHostController
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.google.common.truth.Truth
+import com.example.screens.settings.R
+import com.example.uitesthiltmanifest.HiltComponentActivity
+import com.google.common.truth.Truth.assertThat
 import dagger.hilt.android.testing.BindValue
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import dagger.hilt.android.testing.HiltTestApplication
-import com.example.screens.settings.R
-import com.example.uitesthiltmanifest.HiltComponentActivity
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -26,6 +26,7 @@ import org.junit.runner.RunWith
 import org.robolectric.annotation.Config
 import org.robolectric.shadows.ShadowLog
 import kotlin.properties.ReadOnlyProperty
+
 
 @RunWith(AndroidJUnit4::class)
 @Config(
@@ -91,8 +92,8 @@ class NavigationTest {
             onNodeWithText(login)
                 .performClick()
 
-            Truth.assertThat(navController.currentDestination?.route).isEqualTo(settingsNavPattern)
-            Truth.assertThat(onLoginClick).isEqualTo(1)
+            assertThat(navController.currentDestination?.route).isEqualTo(settingsNavPattern)
+            assertThat(onLoginClick).isEqualTo(1)
         }
     }
 }

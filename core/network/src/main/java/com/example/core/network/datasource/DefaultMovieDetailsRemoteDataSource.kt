@@ -1,9 +1,9 @@
 package com.example.core.network.datasource
 
+import com.example.core.model.Movie
 import com.example.core.model.MovieCredit
 import com.example.core.model.MovieDetails
 import com.example.core.model.Video
-import com.example.core.model.Movie
 import com.example.core.network.model.response.asDomainObject
 import com.example.core.network.service.MovieDetailsApi
 import javax.inject.Inject
