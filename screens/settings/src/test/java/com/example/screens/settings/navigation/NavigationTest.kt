@@ -60,9 +60,9 @@ class NavigationTest {
 
     private lateinit var navController: TestNavHostController
 
-    private fun AndroidComposeTestRule<*,*>.stringResource(
+    private fun AndroidComposeTestRule<*, *>.stringResource(
         @StringRes resId: Int
-    ) = ReadOnlyProperty<Any?, String> {_,_ -> activity.getString(resId)}
+    ) = ReadOnlyProperty<Any?, String> {_, _ -> activity.getString(resId)}
 
     private val login by composeTestRule.stringResource(R.string.login)
 
