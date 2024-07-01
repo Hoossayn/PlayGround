@@ -63,13 +63,13 @@ class TvShowsScreenTest {
                             sourceLoadStates = LoadStates(
                                 refresh = LoadState.Loading,
                                 append = LoadState.NotLoading(false),
-                                prepend = LoadState.NotLoading(false)
-                            )
-                        )
+                                prepend = LoadState.NotLoading(false),
+                            ),
+                        ),
                     ).collectAsLazyPagingItems(),
                     filters = testFilters(),
                     onTVShowClick = { onTVShowClick++ },
-                    onFilterItemSelected = { onFilterItemSelected++ }
+                    onFilterItemSelected = { onFilterItemSelected++ },
                 )
             }
             onNodeWithTag(FRESH_LOAD_PROGRESS_TEST_TAG).assert(

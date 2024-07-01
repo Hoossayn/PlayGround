@@ -82,7 +82,7 @@ class NavigationTest {
 
                 NavHost(
                     navController = navController,
-                    startDestination = settingsNavPattern
+                    startDestination = settingsNavPattern,
                 ) {
                     settingsScreen(onLoginClick = { onLoginClick++ })
                 }

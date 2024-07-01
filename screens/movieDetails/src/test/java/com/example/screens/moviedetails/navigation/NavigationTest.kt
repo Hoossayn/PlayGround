@@ -87,11 +87,11 @@ class NavigationTest {
 
                 NavHost(
                     navController = navController,
-                    startDestination = movieDetailsRoutePattern
+                    startDestination = movieDetailsRoutePattern,
                 ) {
                     movieDetailsScreen(
                         onMovieItemClick = { onMovieItemClick++ },
-                        onNavigateUp = { onNavigateUp++ }
+                        onNavigateUp = { onNavigateUp++ },
                     )
                 }
             }

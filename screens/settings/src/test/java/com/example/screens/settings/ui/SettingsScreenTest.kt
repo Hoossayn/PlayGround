@@ -61,7 +61,7 @@ class SettingsScreenTest {
                     onChangeDynamicColorPreference = { onChangeDynamicColorPreference++ },
                     onChangeDarkThemeConfig = { onChangeDarkThemeConfig++ },
                     onLoginClick = { onLoginClick++ },
-                    onLogoutClick = {}
+                    onLogoutClick = {},
                 )
             }
             onNode(hasProgressBarRangeInfo(ProgressBarRangeInfo.Indeterminate))
@@ -78,13 +78,13 @@ class SettingsScreenTest {
                         preference = UserEditableSettings(
                             isLoggedIn = false,
                             themeConfig = ThemeConfig.DARK,
-                            isDynamicColor = false
-                        )
+                            isDynamicColor = false,
+                        ),
                     ),
                     onChangeDynamicColorPreference = { onChangeDynamicColorPreference++ },
                     onChangeDarkThemeConfig = { onChangeDarkThemeConfig++ },
                     onLoginClick = { onLoginClick++ },
-                    onLogoutClick = { }
+                    onLogoutClick = { },
                 )
             }
 
@@ -109,14 +109,14 @@ class SettingsScreenTest {
                         preference = UserEditableSettings(
                             isLoggedIn = false,
                             themeConfig = ThemeConfig.DARK,
-                            isDynamicColor = true
-                        )
+                            isDynamicColor = true,
+                        ),
                     ),
                     supportDynamicColor = true,
                     onChangeDynamicColorPreference = { onChangeDynamicColorPreference++ },
                     onChangeDarkThemeConfig = { onChangeDarkThemeConfig++ },
                     onLoginClick = { onLoginClick++ },
-                    onLogoutClick = {}
+                    onLogoutClick = {},
                 )
             }
 

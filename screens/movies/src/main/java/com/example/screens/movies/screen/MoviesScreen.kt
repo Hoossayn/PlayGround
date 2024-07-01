@@ -159,25 +159,25 @@ fun MoviesScreen(
                                     Text(
                                         text = stringResource(id = R.string.movies_title),
                                         style = PlayGround.typography.titleMedium,
-                                        color = PlayGround.color.onPrimary
+                                        color = PlayGround.color.onPrimary,
                                     )
                                 },
                                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                                     containerColor = Color.Transparent,
-                                    scrolledContainerColor = Color.Transparent
+                                    scrolledContainerColor = Color.Transparent,
                                 ),
                                 actions = {
                                     Button(onClick = onSearchClicked) {
                                         Icon(
                                             painter = painterResource(
-                                                id = com.example.core.ui.R.drawable.search
+                                                id = com.example.core.ui.R.drawable.search,
                                             ),
                                             contentDescription = stringResource(
-                                                id = R.string.movies_content_description_search
-                                            )
+                                                id = R.string.movies_content_description_search,
+                                            ),
                                         )
                                     }
-                                }
+                                },
                             )
                         }
                     }
@@ -209,7 +209,7 @@ fun MoviesScreen(
                                 posterUrl = path,
                                 contentDescription = movie.title,
                                 shimmer = shimmerInstance,
-                                onClick = { onMovieClick(movie.id) }
+                                onClick = { onMovieClick(movie.id) },
                             )
                         }
 
@@ -218,7 +218,7 @@ fun MoviesScreen(
                                 Box(
                                     modifier = Modifier
                                         .fillMaxWidth()
-                                        .wrapContentHeight()
+                                        .wrapContentHeight(),
                                 ) {
                                     CircularProgressIndicator(
                                         modifier = Modifier
@@ -229,7 +229,7 @@ fun MoviesScreen(
                                 }
                             }
                         }
-                    }
+                    },
                 )
 
                 if (movieLazyPagingItems.loadState.refresh == LoadState.Loading) {
@@ -240,7 +240,7 @@ fun MoviesScreen(
                             .size(30.dp)
                             .padding(vertical = PlayGround.spacing.one),
                         strokeCap = StrokeCap.Round,
-                        strokeWidth = 1.dp
+                        strokeWidth = 1.dp,
                     )
                 }
                 MovieListFilter(

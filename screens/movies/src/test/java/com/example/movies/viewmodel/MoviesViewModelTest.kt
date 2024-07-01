@@ -36,7 +36,7 @@ class MoviesViewModelTest {
     fun setUp() {
         moviesViewModel = MoviesViewModel(
             movieListRepository = movieListRepository,
-            dispatcher = mainDispatcherRule.testDispatcher
+            dispatcher = mainDispatcherRule.testDispatcher,
         )
     }
 

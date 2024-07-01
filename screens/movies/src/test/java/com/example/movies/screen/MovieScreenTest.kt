@@ -76,12 +76,12 @@ class MovieScreenTest {
                         sourceLoadStates = LoadStates(
                             refresh = LoadState.Loading,
                             append = LoadState.NotLoading(false),
-                            prepend = LoadState.NotLoading(false)
-                        )
-                    )
+                            prepend = LoadState.NotLoading(false),
+                        ),
+                    ),
                 ).collectAsLazyPagingItems(),
                 onMovieClick = { onMovieClickCounter++ },
-                onFilterItemSelected = { onFilterItemSelectedCounter++ }
+                onFilterItemSelected = { onFilterItemSelectedCounter++ },
             )
         }
 
@@ -151,7 +151,7 @@ class MovieScreenTest {
                     PagingData.from(data = testMovies()),
                 ).collectAsLazyPagingItems(),
                 onMovieClick = { onMovieClickCounter++ },
-                onFilterItemSelected = { onFilterItemSelectedCounter++ }
+                onFilterItemSelected = { onFilterItemSelectedCounter++ },
             )
         }
 

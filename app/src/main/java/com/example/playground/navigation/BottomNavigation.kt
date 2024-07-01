@@ -75,8 +75,8 @@ fun BottomNavigation(
             initialAlpha = 0.3f,
             animationSpec = spring(
                 dampingRatio = Spring.DampingRatioHighBouncy,
-                stiffness = Spring.StiffnessMedium
-            )
+                stiffness = Spring.StiffnessMedium,
+            ),
         ),
         exit = slideOutVertically() +
         shrinkVertically(shrinkTowards = Alignment.Bottom) + fadeOut(),
@@ -95,13 +95,13 @@ fun BottomNavigation(
                                     }
                                     launchSingleTop = true
                                     restoreState = true
-                                }
+                                },
                             )
-                        }
+                        },
                     )
                 }
             }
-        }
+        },
     )
 }
 

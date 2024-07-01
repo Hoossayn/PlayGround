@@ -22,11 +22,11 @@ class AppViewModel
                         isLoggedIn = userData.isLoggedIn,
                         themeConfig = userData.themeConfig,
                         isDynamicColor = userData.usDynamicColor,
-                    )
+                    ),
                 )
         }.stateIn(
             scope = viewModelScope,
             initialValue = AppUIState.Loading,
-            started = SharingStarted.WhileSubscribed(5_000)
+            started = SharingStarted.WhileSubscribed(5_000),
         )
 }

@@ -52,8 +52,8 @@ class SettingsViewModelTest {
                 UserEditableSettings(
                     isLoggedIn = false,
                     themeConfig = ThemeConfig.DARK,
-                    isDynamicColor = false
-                )
+                    isDynamicColor = false,
+                ),
             )
         }
         verify(exactly = 1) { localStorage.userData() }

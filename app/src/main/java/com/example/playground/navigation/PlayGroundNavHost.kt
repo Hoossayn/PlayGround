@@ -33,7 +33,7 @@ fun PlayGroundNavHost(
     NavHost(
         modifier = Modifier,
         navController = navController,
-        startDestination = moviesRoutePattern
+        startDestination = moviesRoutePattern,
     ) {
         moviesScreen(onMovieClick = onMovieClick)
         tvShowsScreen(onTVShowClick = {})
@@ -41,7 +41,7 @@ fun PlayGroundNavHost(
         movieDetailsScreen(
             onMovieItemClick = onMovieClick,
             onNavigateUp = onNavigateUp,
-            onWatchTrailerClick = {}
+            onWatchTrailerClick = {},
         )
         settingsScreen(onLoginClick = {})
     }

@@ -46,14 +46,14 @@ class MoviesDetailViewModelTest {
         ShadowLog.stream = System.out
         movieDetailsViewModel = MovieDetailsViewModel(
             savedStateHandle = savedStateHandle,
-            movieDetailsRepository = movieDetailsRepository
+            movieDetailsRepository = movieDetailsRepository,
         )
     }
 
     @Test
     fun movieDetailsViewModel_loadMovieDetailsSuccessful_sendMoviesDetails() = runTest {
         every { movieDetailsRepository.movieDetails(any()) } returns flowOf<Outcome<MovieDetails>>(
-            Success(MovieDetailsTestData.testMovieDetails(TEST_ID))
+            Success(MovieDetailsTestData.testMovieDetails(TEST_ID)),
         )
 
         movieDetailsViewModel.movieDetailsUiState.test {

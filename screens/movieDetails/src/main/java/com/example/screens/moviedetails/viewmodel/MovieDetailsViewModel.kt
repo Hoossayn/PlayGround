@@ -39,7 +39,7 @@ class MovieDetailsViewModel
     }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5_000),
-        initialValue = MovieDetailsUiState.Loading
+        initialValue = MovieDetailsUiState.Loading,
     )
 
     @Suppress("MagicNumber")
@@ -53,7 +53,7 @@ class MovieDetailsViewModel
     }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5_000),
-        initialValue = MovieCreditUiState.Loading
+        initialValue = MovieCreditUiState.Loading,
     )
 
     @Suppress("MagicNumber")
@@ -67,7 +67,7 @@ class MovieDetailsViewModel
     }.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5_000),
-        initialValue = SimilarMoviesUiState.Loading
+        initialValue = SimilarMoviesUiState.Loading,
     )
 
     @Suppress("MagicNumber")

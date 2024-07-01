@@ -43,7 +43,7 @@ fun NavGraphBuilder.movieDetailsScreen(
                 type = NavType.LongType
                 defaultValue = 0L
             },
-        )
+        ),
     ) {
         MoviesDetailsScreen(
             onMovieItemClick = onMovieItemClick,

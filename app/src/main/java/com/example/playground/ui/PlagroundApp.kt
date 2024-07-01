@@ -43,7 +43,7 @@ fun PlayGroundApp(
     Scaffold(
         modifier = Modifier.testTag(MAIN_CONTENT_TEST_TAG),
         bottomBar = { BottomNavigation(navController, bottomBarState.value) },
-        snackbarHost = { SnackbarHost(snackBarHostState) }
+        snackbarHost = { SnackbarHost(snackBarHostState) },
     ) { innerPadding ->
 
         Box(
@@ -51,14 +51,14 @@ fun PlayGroundApp(
                 bottom = max(
                     a = 0.dp,
                     b = innerPadding.calculateBottomPadding() - 40.dp,
-                )
+                ),
             ),
             content = {
                 PlayGroundNavHost(
                     navController = navController,
                     onShowSnackBar = onShowSnackBar,
                 )
-            }
+            },
         )
     }
     LaunchedEffect(navBackStackEntry?.destination?.route) {

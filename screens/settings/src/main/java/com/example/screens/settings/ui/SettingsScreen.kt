@@ -129,14 +129,14 @@ fun SettingsScreen(
                     Text(
                         text = stringResource(id = R.string.settings),
                         style = PlayGround.typography.titleMedium,
-                        color = PlayGround.color.onPrimary
+                        color = PlayGround.color.onPrimary,
                     )
                 },
                 windowInsets = TopAppBarDefaults.windowInsets,
                 colors = TopAppBarDefaults.centerAlignedTopAppBarColors(
                     containerColor = Color.Transparent,
-                    scrolledContainerColor = Color.Transparent
-                )
+                    scrolledContainerColor = Color.Transparent,
+                ),
             )
             TwoAndHalfHorizontalSpacer()
             Box {
@@ -147,7 +147,7 @@ fun SettingsScreen(
 
                         LazyColumn(
                             modifier = Modifier.fillMaxWidth(),
-                            horizontalAlignment = Alignment.CenterHorizontally
+                            horizontalAlignment = Alignment.CenterHorizontally,
                         ) {
                             item { UserDetails(profilePath = "") }
                             item { MovieAndTVScore() }
@@ -167,7 +167,7 @@ fun SettingsScreen(
                                 onDismissRequest = { showThemeSettingsDialog = false },
                                 properties = DialogProperties(usePlatformDefaultWidth = false),
                                 modifier = Modifier.widthIn(
-                                    max = configuration.screenHeightDp.dp - 80.dp
+                                    max = configuration.screenHeightDp.dp - 80.dp,
                                 ),
                                 title = {
                                     Text(
@@ -198,7 +198,7 @@ fun SettingsScreen(
                                             .padding(horizontal = 8.dp)
                                             .clickable { showThemeSettingsDialog = false },
                                     )
-                                }
+                                },
                             )
                         }
                     }
@@ -317,7 +317,7 @@ private fun ChangeThemeButton(onClick: () -> Unit) {
                 .fillMaxWidth()
                 .padding(
                     horizontal = PlayGround.spacing.one,
-                    vertical = PlayGround.spacing.oneAndHalf
+                    vertical = PlayGround.spacing.oneAndHalf,
                 ),
             horizontalArrangement = Arrangement.Start,
             verticalAlignment = Alignment.CenterVertically,

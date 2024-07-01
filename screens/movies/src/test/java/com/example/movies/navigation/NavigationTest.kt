@@ -76,7 +76,7 @@ class NavigationTest {
 
                 NavHost(
                     navController = navController,
-                    startDestination = moviesRoutePattern
+                    startDestination = moviesRoutePattern,
                 ) {
                     moviesScreen(onMovieClick = { onMovieClick++ })
                 }

@@ -25,13 +25,13 @@ class SettingsViewModel
                 preference = UserEditableSettings(
                     isLoggedIn = it.isLoggedIn,
                     themeConfig = it.themeConfig,
-                    isDynamicColor = it.usDynamicColor
+                    isDynamicColor = it.usDynamicColor,
                 ),
             )
         }.stateIn(
             scope = viewModelScope,
             started = SharingStarted.Eagerly,
-            initialValue = SettingsUiState.Loading
+            initialValue = SettingsUiState.Loading,
         )
 
     fun onLogout() {
