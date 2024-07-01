@@ -89,7 +89,7 @@ fun MovieDetailsText(
                 top = PlayGround.spacing.one,
                 bottom =
                     if (shouldShowReadMore) PlayGround.spacing.six else PlayGround.spacing.one,
-                ),
+            ),
             color = color,
             fontSize = fontSize,
             fontStyle = fontStyle,
