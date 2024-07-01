@@ -541,7 +541,7 @@ fun MoviesDetailsScreen(
                                     .testTag(MOVIE_DETAILS_CATEGORIES_ROW)
                                     .padding(horizontal = PlayGround.spacing.two),
                                 horizontalArrangement = Arrangement.spacedBy(
-                                    PlayGround.spacing.one
+                                    PlayGround.spacing.one,
                                 ),
                                 verticalArrangement = Arrangement.spacedBy(PlayGround.spacing.one),
                             ) {
