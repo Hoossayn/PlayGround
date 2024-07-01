@@ -141,8 +141,7 @@ sealed interface BottomNavItem {
             get() = peopleNavPattern
 
         @Composable
-        override fun title(): String =
-            stringResource(com.example.screens.people.R.string.people)
+        override fun title(): String = stringResource(com.example.screens.people.R.string.people)
     }
 
     data object More : BottomNavItem {
