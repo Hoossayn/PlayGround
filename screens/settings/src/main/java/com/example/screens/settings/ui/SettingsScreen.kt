@@ -315,7 +315,10 @@ private fun ChangeThemeButton(onClick: () -> Unit) {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = PlayGround.spacing.one, vertical = PlayGround.spacing.oneAndHalf),
+                .padding(
+                    horizontal = PlayGround.spacing.one,
+                    vertical = PlayGround.spacing.oneAndHalf
+                ),
             horizontalArrangement = Arrangement.Start,
             verticalAlignment = Alignment.CenterVertically,
         ) {

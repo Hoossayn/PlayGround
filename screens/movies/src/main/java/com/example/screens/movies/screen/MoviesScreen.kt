@@ -169,7 +169,9 @@ fun MoviesScreen(
                                 actions = {
                                     Button(onClick = onSearchClicked) {
                                         Icon(
-                                            painter = painterResource(id = com.example.core.ui.R.drawable.search),
+                                            painter = painterResource(
+                                                id = com.example.core.ui.R.drawable.search
+                                            ),
                                             contentDescription = stringResource(
                                                 id = R.string.movies_content_description_search
                                             )

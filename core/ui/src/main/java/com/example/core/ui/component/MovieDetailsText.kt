@@ -83,12 +83,11 @@ fun MovieDetailsText(
     Box(modifier = Modifier.wrapContentSize()) {
         Text(
             text = shortText,
-            modifier = modifier
-                .padding(
-                    start = PlayGround.spacing.one,
-                    end = PlayGround.spacing.one,
-                    top = PlayGround.spacing.one,
-                    bottom = if (shouldShowReadMore) PlayGround.spacing.six else PlayGround.spacing.one,
+            modifier = modifier.padding(
+                start = PlayGround.spacing.one,
+                end = PlayGround.spacing.one,
+                top = PlayGround.spacing.one,
+                bottom = if (shouldShowReadMore) PlayGround.spacing.six else PlayGround.spacing.one,
                 ),
             color = color,
             fontSize = fontSize,

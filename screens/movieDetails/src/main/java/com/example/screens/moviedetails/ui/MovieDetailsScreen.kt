@@ -330,7 +330,8 @@ fun MoviesDetailsScreen(
                             Row(
                                 modifier = Modifier.statusBarsPadding(),
                                 verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement = Arrangement.spacedBy(PlayGround.spacing.two),
+                                horizontalArrangement =
+                                Arrangement.spacedBy(PlayGround.spacing.two),
                             ) {
                                 Surface(
                                     modifier = Modifier.padding(PlayGround.spacing.one),
@@ -538,7 +539,8 @@ fun MoviesDetailsScreen(
                                     .fillMaxWidth()
                                     .testTag(MOVIE_DETAILS_CATEGORIES_ROW)
                                     .padding(horizontal = PlayGround.spacing.two),
-                                horizontalArrangement = Arrangement.spacedBy(PlayGround.spacing.one),
+                                horizontalArrangement =
+                                Arrangement.spacedBy(PlayGround.spacing.one),
                                 verticalArrangement = Arrangement.spacedBy(PlayGround.spacing.one),
                             ) {
                                 (movieDetails.genres.map { genre -> genre.name })

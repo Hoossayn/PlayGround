@@ -20,7 +20,9 @@ interface DataModule {
     fun provideMoviesRepository(repository: DefaultMovieListRepository): MovieListRepository
 
     @Binds
-    fun providesMovieDetailsRepository(repository: DefaultMovieDetailsRepository): MovieDetailsRepository
+    fun providesMovieDetailsRepository(
+        repository: DefaultMovieDetailsRepository
+    ): MovieDetailsRepository
 
     @Binds
     fun provideTVShowsRepository(repo: DefaultTvShowsRepository): TvShowsRepository
