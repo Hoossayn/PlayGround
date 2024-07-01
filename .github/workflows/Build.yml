@@ -69,16 +69,6 @@ jobs:
       - name: Check lint
         run: ./gradlew :app:lintRelease
 
-      - name: Generate androidTest Coverage Report
-        run: ./gradlew jacocoTestCoverageReport
-
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4
-        with:
-          files: "**/build/reports/jacoco/test*UnitTestCoverage/**.xml"
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.3
         with:
