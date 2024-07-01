@@ -32,7 +32,7 @@ class MainActivity : ComponentActivity() {
         const val TAG = "MainActivity"
     }
 
-   // @Inject
+    // @Inject
     // lateinit var lazyStats: dagger.Lazy<JankStats>
 
     @IoDispatcher

@@ -16,36 +16,34 @@ import javax.inject.Inject
 @HiltViewModel
 class SettingsViewModel
     @Inject
-    constructor(
-        private val localStorage: LocalStorage,
-) : ViewModel() {
-    val settingsUiState: StateFlow<SettingsUiState> = localStorage.userData()
-        .map {
-            SettingsUiState.Success(
-                preference = UserEditableSettings(
-                    isLoggedIn = it.isLoggedIn,
-                    themeConfig = it.themeConfig,
-                    isDynamicColor = it.usDynamicColor,
-                ),
+    constructor(private val localStorage: LocalStorage) : ViewModel() {
+        val settingsUiState: StateFlow<SettingsUiState> = localStorage.userData()
+            .map {
+                SettingsUiState.Success(
+                    preference = UserEditableSettings(
+                        isLoggedIn = it.isLoggedIn,
+                        themeConfig = it.themeConfig,
+                        isDynamicColor = it.usDynamicColor,
+                    ),
+                )
+            }.stateIn(
+                scope = viewModelScope,
+                started = SharingStarted.Eagerly,
+                initialValue = SettingsUiState.Loading,
             )
-        }.stateIn(
-            scope = viewModelScope,
-            started = SharingStarted.Eagerly,
-            initialValue = SettingsUiState.Loading,
-        )
 
-    fun onLogout() {
-        viewModelScope.launch { localStorage.logout() }
-    }
+        fun onLogout() {
+            viewModelScope.launch { localStorage.logout() }
+        }
 
-    fun onThemeConfig(config: ThemeConfig) {
-        viewModelScope.launch { localStorage.setThemeConfig(config) }
-    }
+        fun onThemeConfig(config: ThemeConfig) {
+            viewModelScope.launch { localStorage.setThemeConfig(config) }
+        }
 
-    fun onDynamicColourPreferenceChanged(useDynamicColor: Boolean) {
-        viewModelScope.launch { localStorage.setUseDynamicColor(useDynamicColor) }
+        fun onDynamicColourPreferenceChanged(useDynamicColor: Boolean) {
+            viewModelScope.launch { localStorage.setUseDynamicColor(useDynamicColor) }
+        }
     }
-}
 
 sealed interface SettingsUiState {
     data object Loading : SettingsUiState

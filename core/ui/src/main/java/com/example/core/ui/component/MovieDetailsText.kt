@@ -87,8 +87,8 @@ fun MovieDetailsText(
                 start = PlayGround.spacing.one,
                 end = PlayGround.spacing.one,
                 top = PlayGround.spacing.one,
-                bottom = if (shouldShowReadMore) PlayGround.spacing.six else PlayGround.spacing.one,
-                ),
+                bottom =
+                    if (shouldShowReadMore) PlayGround.spacing.six else PlayGround.spacing.one),
             color = color,
             fontSize = fontSize,
             fontStyle = fontStyle,
@@ -189,15 +189,15 @@ fun MovieDetailsTextPreview() {
     PlayGroundTheme {
         val text =
             "Terrible Script, dialogue, directing, hammy editing. Music is meh. Poor acting" +
-                    " (but they clearly got no support). This crap show's the contempt " +
-                    "producers like this have for the audience that gives them money. " +
-                    "The writer, director, producers and editor must have been so full of " +
-                    "ego that I bet continues today, despite the poor reviews. During the " +
-                    "boring minutes (90) I drifted off imagining them all working on these " +
-                    "scenes thinking they were amazing, and trying to understand the level " +
-                    "of narcissism required. Just delusional film makers that like the " +
-                    "smell of each others farts. During the credits I imagined the director " +
-                    "is still down there and that's what got it 0.5 rather than 0."
+                " (but they clearly got no support). This crap show's the contempt " +
+                "producers like this have for the audience that gives them money. " +
+                "The writer, director, producers and editor must have been so full of " +
+                "ego that I bet continues today, despite the poor reviews. During the " +
+                "boring minutes (90) I drifted off imagining them all working on these " +
+                "scenes thinking they were amazing, and trying to understand the level " +
+                "of narcissism required. Just delusional film makers that like the " +
+                "smell of each others farts. During the credits I imagined the director " +
+                "is still down there and that's what got it 0.5 rather than 0."
         MovieDetailsText(text = text, textAlign = TextAlign.Justify)
     }
 }

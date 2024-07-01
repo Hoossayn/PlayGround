@@ -70,16 +70,16 @@ fun BottomNavigation(
     AnimatedVisibility(
         visible = show,
         enter = slideInVertically() +
-        expandVertically(expandFrom = Alignment.Top) +
-        fadeIn(
-            initialAlpha = 0.3f,
-            animationSpec = spring(
-                dampingRatio = Spring.DampingRatioHighBouncy,
-                stiffness = Spring.StiffnessMedium,
+            expandVertically(expandFrom = Alignment.Top) +
+            fadeIn(
+                initialAlpha = 0.3f,
+                animationSpec = spring(
+                    dampingRatio = Spring.DampingRatioHighBouncy,
+                    stiffness = Spring.StiffnessMedium,
+                ),
             ),
-        ),
         exit = slideOutVertically() +
-        shrinkVertically(shrinkTowards = Alignment.Bottom) + fadeOut(),
+            shrinkVertically(shrinkTowards = Alignment.Bottom) + fadeOut(),
         content = {
             NavigationBar(modifier = Modifier.testTag(BOTTOM_NAV_BAR_TEST_TAG)) {
                 items.forEach { item ->

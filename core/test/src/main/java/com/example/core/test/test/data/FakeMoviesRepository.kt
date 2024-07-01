@@ -16,4 +16,4 @@ class FakeMoviesRepository
         override suspend fun topRatedMovies(filter: MoviesFilter): List<Movie> = testMovies()
 
         override suspend fun upComingMovies(filter: MoviesFilter): List<Movie> = testMovies()
-}
+    }

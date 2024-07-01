@@ -330,8 +330,9 @@ fun MoviesDetailsScreen(
                             Row(
                                 modifier = Modifier.statusBarsPadding(),
                                 verticalAlignment = Alignment.CenterVertically,
-                                horizontalArrangement =
-                                Arrangement.spacedBy(PlayGround.spacing.two),
+                                horizontalArrangement = Arrangement.spacedBy(
+                                    PlayGround.spacing.two,
+                                ),
                             ) {
                                 Surface(
                                     modifier = Modifier.padding(PlayGround.spacing.one),
@@ -418,11 +419,11 @@ fun MoviesDetailsScreen(
                                     .testTag(MOVIE_DETAILS_MAIN_CAST_ROW)
                                     .padding(horizontal = PlayGround.spacing.two),
                                 horizontalArrangement =
-                                if (movieCreditUiState is MovieCreditUiState.Success) {
-                                    Arrangement.spacedBy(PlayGround.spacing.one)
-                                } else {
-                                    Arrangement.Center
-                                },
+                                    if (movieCreditUiState is MovieCreditUiState.Success) {
+                                        Arrangement.spacedBy(PlayGround.spacing.one)
+                                    } else {
+                                        Arrangement.Center
+                                    },
                             ) {
                                 when (movieCreditUiState) {
                                     is MovieCreditUiState.LoadFailed -> {
@@ -479,11 +480,11 @@ fun MoviesDetailsScreen(
                                     .testTag(MOVIE_DETAILS_CREW_ROW)
                                     .padding(horizontal = PlayGround.spacing.two),
                                 horizontalArrangement =
-                                if (movieCreditUiState is MovieCreditUiState.Success) {
-                                    Arrangement.spacedBy(PlayGround.spacing.one)
-                                } else {
-                                    Arrangement.Center
-                                },
+                                    if (movieCreditUiState is MovieCreditUiState.Success) {
+                                        Arrangement.spacedBy(PlayGround.spacing.one)
+                                    } else {
+                                        Arrangement.Center
+                                    },
                             ) {
                                 when (movieCreditUiState) {
                                     is MovieCreditUiState.LoadFailed -> {
@@ -539,8 +540,9 @@ fun MoviesDetailsScreen(
                                     .fillMaxWidth()
                                     .testTag(MOVIE_DETAILS_CATEGORIES_ROW)
                                     .padding(horizontal = PlayGround.spacing.two),
-                                horizontalArrangement =
-                                Arrangement.spacedBy(PlayGround.spacing.one),
+                                horizontalArrangement = Arrangement.spacedBy(
+                                    PlayGround.spacing.one
+                                ),
                                 verticalArrangement = Arrangement.spacedBy(PlayGround.spacing.one),
                             ) {
                                 (movieDetails.genres.map { genre -> genre.name })
@@ -568,11 +570,11 @@ fun MoviesDetailsScreen(
                                     .testTag(MOVIE_DETAILS_RECOMMENDATIONS_ROW)
                                     .padding(horizontal = PlayGround.spacing.two),
                                 horizontalArrangement =
-                                if (similarMoviesUiState is SimilarMoviesUiState.Success) {
-                                    Arrangement.spacedBy(PlayGround.spacing.one)
-                                } else {
-                                    Arrangement.Center
-                                },
+                                    if (similarMoviesUiState is SimilarMoviesUiState.Success) {
+                                        Arrangement.spacedBy(PlayGround.spacing.one)
+                                    } else {
+                                        Arrangement.Center
+                                    },
                             ) {
                                 when (similarMoviesUiState) {
                                     is SimilarMoviesUiState.LoadFailed -> {
@@ -737,18 +739,18 @@ private fun testNetworkMovieDetails(movieId: Long): NetworkMovieDetails = Networ
     backdropPath = "/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
     budget = 63000000,
     genres =
-    listOf(
-        NetworkGenre(id = 18, name = "Drama"),
-        NetworkGenre(id = 53, name = "Thriller"),
-        NetworkGenre(id = 35, name = "Comedy"),
-    ),
+        listOf(
+            NetworkGenre(id = 18, name = "Drama"),
+            NetworkGenre(id = 53, name = "Thriller"),
+            NetworkGenre(id = 35, name = "Comedy"),
+        ),
     homepage = "http://www.foxmovies.com/movies/fight-club",
     id = movieId,
     imdbId = "tt0137523",
     originalLanguage = "en",
     originalTitle = "Fight Club",
     overview =
-    """
+        """
             A ticking-time-bomb insomniac and a slippery soap salesman channel primal male
              aggression into a shocking new form of therapy. Their concept catches on, with 
              underground \"fight clubs\" forming in every town, until an eccentric gets in the 
@@ -760,13 +762,13 @@ private fun testNetworkMovieDetails(movieId: Long): NetworkMovieDetails = Networ
     revenue = 100853753,
     runtime = 139,
     spokenLanguages =
-    listOf(
-        NetworkSpokenLanguage(
-            englishName = "English",
-            iso6391 = "en",
-            name = "English",
+        listOf(
+            NetworkSpokenLanguage(
+                englishName = "English",
+                iso6391 = "en",
+                name = "English",
+            ),
         ),
-    ),
     status = "Released",
     tagline = "Mischief. Mayhem. Soap.",
     title = "Fight Club",
@@ -809,34 +811,34 @@ private fun testNetworkMovieCredit(movieId: Long): NetworkMovieCredit = NetworkM
         ),
     ),
     crew =
-    listOf(
-        NetworkCrew(
-            adult = false,
-            creditId = "55731b8192514111610027d7",
-            department = "Production",
-            gender = 2,
-            id = 376,
-            job = "Executive Producer",
-            knownForDepartment = "Production",
-            name = "Arnon Milchan",
-            originalName = "Arnon Milchan",
-            popularity = 2.931,
-            profilePath = "/b2hBExX4NnczNAnLuTBF4kmNhZm.jpg",
+        listOf(
+            NetworkCrew(
+                adult = false,
+                creditId = "55731b8192514111610027d7",
+                department = "Production",
+                gender = 2,
+                id = 376,
+                job = "Executive Producer",
+                knownForDepartment = "Production",
+                name = "Arnon Milchan",
+                originalName = "Arnon Milchan",
+                popularity = 2.931,
+                profilePath = "/b2hBExX4NnczNAnLuTBF4kmNhZm.jpg",
+            ),
+            NetworkCrew(
+                adult = false,
+                creditId = "5894c4eac3a3685ec6000218",
+                department = "Costume & Make-Up",
+                gender = 2,
+                id = 605,
+                job = "Costume Design",
+                knownForDepartment = "Costume & Make-Up",
+                name = "Michael Kaplan",
+                originalName = "Michael Kaplan",
+                popularity = 4.294,
+                profilePath = "/bNarnI5K4XYIKaHsX6HAitllyQr.jpg",
+            ),
         ),
-        NetworkCrew(
-            adult = false,
-            creditId = "5894c4eac3a3685ec6000218",
-            department = "Costume & Make-Up",
-            gender = 2,
-            id = 605,
-            job = "Costume Design",
-            knownForDepartment = "Costume & Make-Up",
-            name = "Michael Kaplan",
-            originalName = "Michael Kaplan",
-            popularity = 4.294,
-            profilePath = "/bNarnI5K4XYIKaHsX6HAitllyQr.jpg",
-        ),
-    ),
 )
 
 @ExcludeFromGeneratedCoverageReport
@@ -879,7 +881,7 @@ private fun testMovies(): List<Movie> = listOf(
         id = 667538,
         title = "Transformers: Rise of the Beasts",
         overview =
-        """
+            """
             When a new threat capable of destroying the entire planet emerges, Optimus Prime and 
             the Autobots must team up with a powerful faction known as the Maximals. With the 
             fate of humanity hanging in the balance, humans Noah and Elena will do whatever it 
@@ -893,7 +895,7 @@ private fun testMovies(): List<Movie> = listOf(
         id = 298618,
         title = "The Flash",
         overview =
-        """
+            """
             When his attempt to save his family inadvertently alters the future, 
             Barry Allen becomes trapped in a reality in which General Zod has returned and 
             there are no Super Heroes to turn to. In order to save the world that he is in and 
@@ -908,7 +910,7 @@ private fun testMovies(): List<Movie> = listOf(
         id = 884605,
         title = "No Hard Feelings",
         overview =
-        """
+            """
             On the brink of losing her childhood home, Maddie discovers an intriguing job listing: 
             wealthy helicopter parents looking for someone to “date” their introverted 19-year-old 
             son, Percy, before he leaves for college. To her surprise, Maddie soon discovers the 
@@ -922,7 +924,7 @@ private fun testMovies(): List<Movie> = listOf(
         id = 346698,
         title = "Barbie",
         overview =
-        """
+            """
             Barbie and Ken are having the time of their lives in the colorful and 
             seemingly perfect world of Barbie Land. However, when they get a chance 
             to go to the real world, they soon discover the joys and perils of 

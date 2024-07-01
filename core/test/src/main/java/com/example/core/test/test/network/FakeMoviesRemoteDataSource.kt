@@ -16,4 +16,4 @@ class FakeMoviesRemoteDataSource
         override suspend fun topRatedMovies(query: MoviesQuery): List<Movie> = testMovies()
 
         override suspend fun upcomingMovies(query: MoviesQuery): List<Movie> = testMovies()
-}
+    }
