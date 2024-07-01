@@ -29,7 +29,6 @@ class DefaultTvShowsRepository
         private val tvSeriesListApi: TVShowsListApi,
         @IoDispatcher private val defaultDispatcher: CoroutineDispatcher,
     ) : TvShowsRepository {
-
         override suspend fun airingToday(filter: MoviesFilter): List<TVShow> =
             withContext(defaultDispatcher) {
                 tvSeriesListApi.airingToday(
