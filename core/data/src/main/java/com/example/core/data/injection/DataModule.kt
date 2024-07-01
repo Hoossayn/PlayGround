@@ -21,7 +21,7 @@ interface DataModule {
 
     @Binds
     fun providesMovieDetailsRepository(
-        repository: DefaultMovieDetailsRepository
+        repository: DefaultMovieDetailsRepository,
     ): MovieDetailsRepository
 
     @Binds
