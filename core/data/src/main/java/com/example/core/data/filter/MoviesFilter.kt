@@ -2,7 +2,6 @@ package com.example.core.data.filter
 
 import com.example.core.network.datasource.MoviesQuery
 
-
 data class MoviesFilter(
     val language: String,
     val page: Int,

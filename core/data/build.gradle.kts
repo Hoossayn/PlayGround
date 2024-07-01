@@ -39,7 +39,6 @@ androidComponents.beforeVariants {
     }
 }
 
-
 dependencies {
 
     implementation(projects.core.common)

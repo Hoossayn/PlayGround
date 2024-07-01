@@ -2,7 +2,6 @@ package com.example.core.network.datasource
 
 import com.example.core.model.Movie
 
-
 interface MoviesRemoteDataSource {
     suspend fun nowPlayingMovies(query: MoviesQuery): List<Movie>
 

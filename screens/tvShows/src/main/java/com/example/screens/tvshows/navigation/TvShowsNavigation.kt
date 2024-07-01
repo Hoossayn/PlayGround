@@ -8,7 +8,6 @@ import com.example.core.ui.navigation.popEnterTransition
 import com.example.core.ui.navigation.popExitTransition
 import com.example.screens.tvshows.ui.TvShowsScreen
 
-
 @Suppress("TopLevelPropertyNaming", "ktlint:standard:property-naming")
 const val tvShowsNavPattern = "/tv-shows"
 

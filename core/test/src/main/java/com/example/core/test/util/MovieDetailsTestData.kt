@@ -13,7 +13,6 @@ import com.example.core.network.model.response.NetworkVideo
 import com.example.core.network.model.response.NetworkVideos
 import com.example.core.network.model.response.asDomainObject
 
-
 object MovieDetailsTestData {
     fun testNetworkMovieDetails(movieId: Long): NetworkMovieDetails = NetworkMovieDetails(
         adult = false,

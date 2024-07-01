@@ -2,7 +2,6 @@ package com.example.core.test.util
 
 import com.example.core.model.Movie
 
-
 fun testMovie(): Movie = Movie(
     id = 667538,
     title = "Transformers: Rise of the Beasts",

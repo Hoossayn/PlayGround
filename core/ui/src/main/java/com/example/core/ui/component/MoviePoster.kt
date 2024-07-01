@@ -32,7 +32,6 @@ import com.valentinilk.shimmer.Shimmer
 import com.valentinilk.shimmer.ShimmerBounds
 import com.valentinilk.shimmer.rememberShimmer
 
-
 const val MOVIE_POSTER_TEST_TAG = "movie_poster"
 private const val SIZE_ASPECT_RATIO = 0.8F
 
@@ -108,4 +107,3 @@ fun PosterPreview() {
         }
     }
 }
-

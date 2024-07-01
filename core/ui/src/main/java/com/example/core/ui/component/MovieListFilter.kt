@@ -16,7 +16,6 @@ import com.example.designSystem.core.theme.PlayGround
 import com.example.designSystem.core.theme.PlayGroundTheme
 import com.example.designSystem.core.theme.TwoAndHalfHorizontalSpacer
 
-
 @ExcludeFromGeneratedCoverageReport
 @Composable
 private fun testFilters() = listOf(
@@ -41,8 +40,6 @@ private fun testFilters() = listOf(
         type = MovieListFilterItem.FilterType.DISCOVER,
     ),
 ).map { Pair("Upcoming", it.isSelected) }
-
-
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -85,4 +82,3 @@ fun MovieListFilterPreview() {
         MovieListFilter(items = testFilters()) {}
     }
 }
-

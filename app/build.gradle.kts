@@ -42,8 +42,6 @@ android {
         }
     }
 
-
-
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -65,13 +63,11 @@ dependencies {
     implementation(projects.core.model)
     implementation(projects.core.data)
 
-
     implementation(projects.screens.movies)
     implementation(projects.screens.tvShows)
     implementation(projects.screens.people)
     implementation(projects.screens.movieDetails)
     implementation(projects.screens.settings)
-
 
     // lifecycle
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -105,7 +101,6 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.navigation.compose)
-
 
     androidTestImplementation(platform(libs.androidx.compose.bom))
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)

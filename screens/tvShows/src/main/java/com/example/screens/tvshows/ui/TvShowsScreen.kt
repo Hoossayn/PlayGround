@@ -76,7 +76,6 @@ import com.valentinilk.shimmer.ShimmerBounds
 import com.valentinilk.shimmer.rememberShimmer
 import kotlinx.coroutines.flow.flowOf
 
-
 const val TITLE_TEST_TAG = "title"
 const val CHIP_GROUP_TEST_TAG = "chips"
 const val TV_SHOWS_GRID_ITEMS_TEST_TAG = "tv_show_gridItems"

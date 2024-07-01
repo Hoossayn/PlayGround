@@ -270,4 +270,3 @@ fun PeopleScreenPreview() {
         PeopleScreen(flowOf(PagingData.from(testPersons())).collectAsLazyPagingItems())
     }
 }
-

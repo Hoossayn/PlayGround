@@ -202,4 +202,3 @@ fun MovieDetailsTextPreview() {
         MovieDetailsText(text = text, textAlign = TextAlign.Justify)
     }
 }
-

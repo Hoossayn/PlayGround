@@ -27,7 +27,6 @@ import org.robolectric.annotation.Config
 import org.robolectric.shadows.ShadowLog
 import kotlin.properties.ReadOnlyProperty
 
-
 @RunWith(AndroidJUnit4::class)
 @Config(
     application = HiltTestApplication::class,
@@ -97,12 +96,3 @@ class NavigationTest {
         }
     }
 }
-
-
-
-
-
-
-
-
-

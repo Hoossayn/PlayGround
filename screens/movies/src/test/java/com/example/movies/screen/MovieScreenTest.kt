@@ -221,7 +221,6 @@ class MovieScreenTest {
         assertThat(onFilterItemSelectedCounter).isEqualTo(1)
     }
 
-
     @Test
     fun moviesScreen_movieItemClick_movieDetailsScreenShown() {
         composeTestRule.setContent {
@@ -251,7 +250,6 @@ class MovieScreenTest {
     }
 }
 
-
 private fun List<MovieListFilterItem>.selectItem(whereLabel: String) = map {
     if (labelFor(it) == whereLabel) {
         it.copy(isSelected = true)
@@ -259,7 +257,6 @@ private fun List<MovieListFilterItem>.selectItem(whereLabel: String) = map {
         it.copy(isSelected = false)
     }
 }
-
 
 private fun labelFor(filterItem: MovieListFilterItem): String {
     return when (filterItem.type) {

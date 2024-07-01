@@ -4,7 +4,6 @@ import com.example.core.model.Person
 import com.example.core.model.PersonMovie
 import com.google.gson.annotations.SerializedName
 
-
 data class NetworkPerson(
     val id: Long,
     val name: String,

@@ -1,6 +1,5 @@
 package com.example.core.network.service
 
-
 import com.example.core.network.Config
 import com.example.core.network.model.response.NetworkTvShow
 import com.example.core.network.model.response.PagedNetworkResponse

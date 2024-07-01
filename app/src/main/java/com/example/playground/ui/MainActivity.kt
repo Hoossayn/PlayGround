@@ -41,7 +41,6 @@ class MainActivity : ComponentActivity() {
 
     private val appViewModel by viewModels<AppViewModel>()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         val splashScreen = installSplashScreen()
         super.onCreate(savedInstanceState)
@@ -82,7 +81,6 @@ class MainActivity : ComponentActivity() {
         super.onResume()
     }
 }
-
 
 @Composable
 private fun shouldUseDarkTheme(uiState: AppUIState): Boolean = when (uiState) {

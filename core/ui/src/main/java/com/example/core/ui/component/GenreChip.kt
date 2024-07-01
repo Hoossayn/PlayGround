@@ -18,7 +18,6 @@ import com.example.designSystem.core.annotation.ThemePreviews
 import com.example.designSystem.core.theme.PlayGround
 import com.example.designSystem.core.theme.PlayGroundTheme
 
-
 @ThemePreviews
 @Composable
 @ExcludeFromGeneratedCoverageReport

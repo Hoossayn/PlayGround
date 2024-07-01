@@ -84,7 +84,6 @@ const val ASPECT_RATIO = 0.7F
 const val FRESH_LOAD_PROGRESS_TEST_TAG = "fresh_load"
 const val APPEND_LOAD_PROGRESS_TEST_TAG = "append_load"
 
-
 @Composable
 @ExcludeFromGeneratedCoverageReport
 fun MoviesScreen(
@@ -265,7 +264,6 @@ private fun filterLabelFor(filterItem: MovieListFilterItem): String {
         MovieListFilterItem.FilterType.DISCOVER -> stringResource(R.string.discover)
     }
 }
-
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

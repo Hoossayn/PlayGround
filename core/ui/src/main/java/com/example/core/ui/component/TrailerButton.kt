@@ -39,4 +39,3 @@ fun TrailerButton(
 fun TrailerButtonPreview() {
     PlayGroundTheme(content = { TrailerButton() })
 }
-

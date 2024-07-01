@@ -218,7 +218,6 @@ fun SettingsScreen(
     }
 }
 
-
 @Composable
 private fun ColumnScope.SettingsPanel(
     themeConfig: ThemeConfig,
@@ -558,4 +557,3 @@ private fun SettingsDialogSectionTitle(text: String) {
         modifier = Modifier.padding(top = PlayGround.spacing.two, bottom = PlayGround.spacing.half),
     )
 }
-

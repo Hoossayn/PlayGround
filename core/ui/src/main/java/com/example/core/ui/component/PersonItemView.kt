@@ -42,7 +42,6 @@ import com.example.designSystem.core.theme.OneVerticalSpacer
 import com.example.designSystem.core.theme.PlayGround
 import com.example.designSystem.core.theme.PlayGroundTheme
 
-
 @ThemePreviews
 @Composable
 @ExcludeFromGeneratedCoverageReport

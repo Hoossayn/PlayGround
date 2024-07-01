@@ -105,7 +105,6 @@ import me.onebone.toolbar.CollapsingToolbarScaffold
 import me.onebone.toolbar.ScrollStrategy
 import me.onebone.toolbar.rememberCollapsingToolbarScaffoldState
 
-
 const val MOVIE_DETAILS_COL = "movies_details_col"
 const val MOVIE_DETAILS_OVERVIEW = "movies_details_overview"
 const val MOVIE_DETAILS_TRAILER_BUTTON = "movies_details_trailer_button"
@@ -118,7 +117,6 @@ const val MOVIE_DETAILS_CATEGORIES_ROW = "movies_details_categories_row"
 const val MOVIE_DETAILS_RECOMMENDATIONS = "movies_details_recommendations"
 const val MOVIE_DETAILS_RECOMMENDATIONS_ROW = "movies_details_recommendations_row"
 const val MOVIE_DETAILS_BOTTOM_BAR = "movies_details_bottom_bar"
-
 
 private const val ONE_HOUR_IN_MINUTES = 60
 private const val MAX_MOVIE_RATING = 10.0
