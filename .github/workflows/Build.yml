@@ -28,9 +28,6 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v3
 
-      - name: Build with gradle
-        run: ./gradlew build
-
       - name: Verify Code Quality
         run: ./gradlew detekt ktlintCheck
 
@@ -68,6 +65,9 @@ jobs:
 
       - name: Check lint
         run: ./gradlew :app:lintRelease
+
+      - name: Build with gradle
+        run: ./gradlew build
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.3.3
