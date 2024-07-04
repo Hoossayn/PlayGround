@@ -42,9 +42,9 @@ class PlayGroundButtonTest {
             Column(
                 modifier = Modifier
                     .padding(PlayGround.spacing.twoAndaHalf)
-                    .background(PlayGround.color.inverseOnSurface)
+                    .background(PlayGround.color.inverseOnSurface),
             ) {
-                PlayGroundButton(onClick = {}, content = { Text(text = "Button")})
+                PlayGroundButton(onClick = {}, content = { Text(text = "Button") })
             }
         }
     }
