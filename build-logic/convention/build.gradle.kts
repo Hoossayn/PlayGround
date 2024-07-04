@@ -72,6 +72,11 @@ gradlePlugin {
             implementationClass = "KtLintConventionPlugin"
         }
 
+        register("androidScreenshotTest") {
+            id = "com.example.playground.android.test.screenshot"
+            implementationClass = "AndroidScreenshotConvention"
+        }
+
         register("androidNavigation") {
             id = "com.example.playground.android.navigation"
             implementationClass = "AndroidNavigationConventionPlugin"

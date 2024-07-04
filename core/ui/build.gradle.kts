@@ -2,6 +2,7 @@ plugins {
     id("com.example.playground.android.library")
     id("com.example.playground.android.navigation")
     id("com.example.playground.android.library.compose")
+    id("com.example.playground.android.test.screenshot")
 }
 
 android {
