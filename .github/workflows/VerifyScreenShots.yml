@@ -25,30 +25,30 @@ jobs:
         with:
           name: screenshots
           path: app/build/outputs/roborazzi
-          workflow: test.yaml
+          workflow: StoreScreenShots.yaml
           branch: main
 
       - name: verify test
         id: verify-test
         run: |
           # If there is a difference between the screenshots, the test will fail.
-          ./gradlew app:verifyRoborazziDebug --stacktrace
+          ./gradlew verifyRoborazziDebug --stacktrace
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4.3.3
         if: ${{ always() }}
         with:
           name: screenshot-diff
           path: app/build/outputs/roborazzi
           retention-days: 30
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4.3.3
         if: ${{ always() }}
         with:
           name: screenshot-diff-reports
           path: app/build/reports
           retention-days: 30
 
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4.3.3
         if: ${{ always() }}
         with:
           name: screenshot-diff-test-results

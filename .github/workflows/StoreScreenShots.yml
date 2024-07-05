@@ -23,10 +23,10 @@ jobs:
       - name: test
         run: |
           # Create screenshots
-          ./gradlew app:recordRoborazziDebug --stacktrace
+          ./gradlew recordRoborazziDebug --stacktrace
 
       # Upload screenshots to GitHub Actions Artifacts
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4.3.3
         with:
           name: screenshots
           path: app/build/outputs/roborazzi
