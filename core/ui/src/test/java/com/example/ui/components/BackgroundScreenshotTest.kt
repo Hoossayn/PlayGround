@@ -22,7 +22,7 @@ class BackgroundScreenshotTest {
     val composeTestRule = createAndroidComposeRule<ComponentActivity>()
 
     @Test
-    fun genreChip_multipleThemes() {
+    fun backGround_multipleThemes() {
         composeTestRule.captureMultiTheme("Background") { desc: String ->
             Background {}
         }
