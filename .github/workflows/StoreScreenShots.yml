@@ -29,5 +29,5 @@ jobs:
       - uses: actions/upload-artifact@v4.3.3
         with:
           name: screenshots
-          path: app/build/outputs/roborazzi
+          path: '**/core/ui/src/test/screenshots'
           retention-days: 30
