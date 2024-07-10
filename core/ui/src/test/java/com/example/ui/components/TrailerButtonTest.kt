@@ -33,7 +33,7 @@ class TrailerButtonTest {
     }
 
     @Test
-    fun trailerButtonTest() {
+    fun trailerButtonTest_showTrailerButton() {
         with(composeTestRule) {
             setContent {
                 TrailerButton()
