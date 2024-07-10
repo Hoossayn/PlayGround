@@ -21,10 +21,10 @@ jobs:
         uses: gradle/gradle-build-action@v2
 
       # Download screenshots from main branch
-      - uses: action-download-artifact@v4.1.7
+      - uses: dawidd6/action-download-artifact@v2
         with:
           name: screenshots
-          path: app/build/outputs/roborazzi
+          path: '**/core/ui/src/test/screenshots'
           workflow: StoreScreenShots.yaml
           branch: main
 
