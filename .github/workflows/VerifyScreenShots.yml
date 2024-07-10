@@ -25,7 +25,7 @@ jobs:
         with:
           name: screenshots
           path: '**/core/ui/src/test/screenshots'
-          workflow: StoreScreenShots.yaml
+          workflow: StoreScreenShots.yml
           branch: main
 
       - name: verify test
