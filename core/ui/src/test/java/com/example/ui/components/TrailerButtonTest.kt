@@ -28,7 +28,7 @@ class TrailerButtonTest {
 
     @Before
     @Throws(Exception::class)
-    fun setUp(){
+    fun setUp() {
         ShadowLog.stream = System.out
     }
 
