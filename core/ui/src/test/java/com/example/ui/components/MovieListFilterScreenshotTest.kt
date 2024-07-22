@@ -25,7 +25,7 @@ class MovieListFilterScreenshotTest {
 
     @Test
     fun movieListFilter_multipleThemes() {
-        composeTestRule.captureMultiTheme("MovieListFilter") { desc: String ->
+        composeTestRule.captureMultiTheme("MovieListFilter") {
             Surface {
                 MovieListFilter(
                     items = listOf(

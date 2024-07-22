@@ -31,7 +31,7 @@ class MovieRatingScreenshotTest {
 
     @Test
     fun movieRating_multipleThemes() {
-        composeTestRule.captureMultiTheme("MovieRating") { desc: String ->
+        composeTestRule.captureMultiTheme("MovieRating") {
             Box(
                 modifier = Modifier
                     .size(200.dp)

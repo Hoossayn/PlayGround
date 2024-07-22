@@ -31,7 +31,7 @@ class PeoplePosterScreenshotTest {
 
     @Test
     fun peoplePoster_multipleThemes() {
-        composeTestRule.captureMultiTheme("PeoplePoster") { desc: String ->
+        composeTestRule.captureMultiTheme("PeoplePoster") {
             Box(
                 modifier = Modifier
                     .size(200.dp)
